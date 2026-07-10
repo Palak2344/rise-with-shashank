@@ -12,7 +12,7 @@ import Community from "./components/Community/Community";
 import FAQ from "./components/FAQ/FAQ";
 import Contact from "./components/Contact/Contact";
 import Gallery from "./components/Gallery/Gallery";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
@@ -29,6 +29,7 @@ function App() {
       <Community />
       <FAQ />
       <Contact />
+      <Footer />  
     </>
   );
 }
