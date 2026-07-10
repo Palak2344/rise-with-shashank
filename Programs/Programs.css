@@ -1,0 +1,283 @@
+.programs{
+    padding:100px 0;
+    background:#fff;
+}
+
+/* ===========================
+   SECTION HEADER
+=========================== */
+
+.program-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-tag{
+    display:inline-block;
+    background:#fdf5ea;
+    color:#c58a22;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.section-title{
+    font-size:52px;
+    color:#111;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.section-title span{
+    color:#c58a22;
+}
+
+.section-description{
+    max-width:760px;
+    margin:0 auto;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ===========================
+   PROGRAM GRID
+=========================== */
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.program-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:20px;
+    border:1px solid #eee;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    text-align:left;
+}
+
+.program-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.program-icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#fdf5ea;
+    color:#c58a22;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.program-card h3{
+    font-size:26px;
+    color:#111;
+    margin-bottom:18px;
+}
+
+.program-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.program-card button{
+    background:#c58a22;
+    color:#fff;
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.program-card button:hover{
+    background:#af7718;
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media(max-width:1200px){
+
+.program-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.section-title{
+    font-size:44px;
+}
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.programs{
+    padding:80px 20px;
+}
+
+.program-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.program-header{
+    margin-bottom:50px;
+}
+
+.section-title{
+    font-size:40px;
+}
+
+.section-description{
+    font-size:17px;
+}
+
+.program-card{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.program-icon{
+    margin:0 auto 25px;
+}
+
+.program-card button{
+    margin-top:auto;
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.programs{
+    padding:70px 18px;
+}
+
+.program-grid{
+    grid-template-columns:1fr;
+}
+
+.program-header{
+    margin-bottom:40px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.section-description{
+    font-size:16px;
+}
+
+.program-card{
+    padding:30px 25px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.program-icon{
+    margin:0 auto 25px;
+}
+
+.program-card h3{
+    font-size:24px;
+}
+
+.program-card p{
+    font-size:15px;
+}
+
+.program-card button{
+    width:100%;
+    max-width:220px;
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.programs{
+    padding:60px 15px;
+}
+
+.section-tag{
+    font-size:13px;
+    padding:8px 18px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.section-description{
+    font-size:15px;
+}
+
+.program-card{
+    padding:25px 20px;
+}
+
+.program-icon{
+    width:65px;
+    height:65px;
+    font-size:26px;
+}
+
+.program-card h3{
+    font-size:22px;
+}
+
+.program-card p{
+    font-size:14px;
+}
+
+.program-card button{
+    width:100%;
+    font-size:14px;
+}
+
+}
