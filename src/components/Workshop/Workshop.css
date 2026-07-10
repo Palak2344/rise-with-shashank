@@ -1,0 +1,394 @@
+.workshop{
+    padding:100px 0;
+    background:#faf8f3;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.workshop-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-tag{
+    display:inline-block;
+    background:#fff;
+    color:#c58a22;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.section-title{
+    text-align:center;
+    font-size:52px;
+    color:#111;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-description{
+    max-width:760px;
+    margin:0 auto;
+    text-align:center;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ===========================
+   INTRO CARD
+=========================== */
+
+.intro-card{
+    background:#fff;
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    margin-bottom:70px;
+    text-align:left;
+}
+
+.intro-card h3{
+    font-size:34px;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.intro-card>p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:25px;
+    color:#666;
+}
+
+.intro-card ul{
+    list-style:none;
+    padding:0;
+    margin:25px 0;
+}
+
+.intro-card li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+    color:#444;
+}
+
+.intro-card svg{
+    color:#c58a22;
+}
+
+.intro-card strong{
+    display:block;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   TIMELINE
+=========================== */
+
+.timeline-title{
+    text-align:center;
+    font-size:40px;
+    color:#111;
+    margin-bottom:40px;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-bottom:80px;
+}
+
+.time-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.time-card:hover{
+    transform:translateY(-8px);
+}
+
+.time-card h4{
+    color:#c58a22;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.time-card p{
+    font-weight:600;
+    margin-bottom:12px;
+    color:#111;
+}
+
+.time-card span{
+    color:#666;
+    line-height:1.7;
+}
+
+/* ===========================
+   DAILY THEMES
+=========================== */
+
+.day-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.day-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:left;
+}
+
+.day-card:hover{
+    transform:translateY(-8px);
+}
+
+.day-card span{
+    display:inline-block;
+    background:#fdf5ea;
+    color:#c58a22;
+    padding:8px 18px;
+    border-radius:25px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.day-card h3{
+    font-size:28px;
+    color:#111;
+    margin-bottom:18px;
+}
+
+.day-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:14px;
+}
+
+.day-card strong{
+    color:#111;
+}
+
+/* ===========================
+   BONUS
+=========================== */
+
+.bonus-card{
+    margin-top:80px;
+    background:#c58a22;
+    color:#fff;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+.bonus-card svg{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.bonus-card h3{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.bonus-card p{
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media(max-width:1200px){
+
+.section-title{
+    font-size:46px;
+}
+
+.timeline{
+    gap:25px;
+}
+
+.day-grid{
+    gap:25px;
+}
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.workshop{
+    padding:80px 20px;
+}
+
+.section-title{
+    font-size:40px;
+}
+
+.timeline{
+    grid-template-columns:1fr;
+}
+
+.day-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.intro-card{
+    text-align:center;
+}
+
+.intro-card>p{
+    justify-content:center;
+}
+
+.intro-card li{
+    justify-content:center;
+}
+
+.day-card{
+    text-align:center;
+}
+
+.day-card span{
+    margin:0 auto 18px;
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.workshop{
+    padding:70px 18px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.section-description{
+    font-size:16px;
+}
+
+.timeline-title{
+    font-size:30px;
+}
+
+.day-grid{
+    grid-template-columns:1fr;
+}
+
+.intro-card,
+.time-card,
+.day-card{
+    padding:28px;
+}
+
+.intro-card h3{
+    font-size:26px;
+}
+
+.day-card h3{
+    font-size:24px;
+}
+
+.bonus-card{
+    padding:35px 25px;
+}
+
+.bonus-card h3{
+    font-size:26px;
+}
+
+.bonus-card svg{
+    font-size:48px;
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.workshop{
+    padding:60px 15px;
+}
+
+.section-tag{
+    font-size:13px;
+    padding:8px 18px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.section-description{
+    font-size:15px;
+}
+
+.timeline-title{
+    font-size:24px;
+}
+
+.intro-card,
+.time-card,
+.day-card{
+    padding:22px;
+}
+
+.intro-card h3{
+    font-size:22px;
+}
+
+.day-card h3{
+    font-size:22px;
+}
+
+.day-card p{
+    font-size:14px;
+}
+
+.bonus-card{
+    padding:28px 20px;
+}
+
+.bonus-card h3{
+    font-size:22px;
+}
+
+.bonus-card p{
+    font-size:15px;
+}
+
+}
