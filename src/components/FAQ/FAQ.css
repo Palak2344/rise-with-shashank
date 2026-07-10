@@ -1,0 +1,230 @@
+.faq{
+    padding:100px 0;
+    background:#fff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.faq-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.faq .section-tag{
+    display:inline-block;
+    background:#fdf5ea;
+    color:#c58a22;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.faq .section-title{
+    font-size:52px;
+    color:#111;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.faq .section-title span{
+    color:#c58a22;
+}
+
+.faq .section-description{
+    max-width:760px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ===========================
+   FAQ LIST
+=========================== */
+
+.faq-list{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:18px;
+    margin-bottom:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   QUESTION
+=========================== */
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    padding:25px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-size:19px;
+    font-weight:600;
+    color:#111;
+    text-align:left;
+}
+
+.faq-question svg{
+    color:#c58a22;
+    font-size:18px;
+    flex-shrink:0;
+}
+
+/* ===========================
+   ANSWER
+=========================== */
+
+.faq-answer{
+    padding:0 30px 25px;
+}
+
+.faq-answer p{
+    color:#666;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* ===========================
+   ACTIVE
+=========================== */
+
+.faq-item.active{
+    border-color:#c58a22;
+}
+
+.faq-item.active .faq-question{
+    color:#c58a22;
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media(max-width:1200px){
+
+.faq .section-title{
+    font-size:46px;
+}
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.faq{
+    padding:80px 20px;
+}
+
+.faq .section-title{
+    font-size:40px;
+}
+
+.faq .section-description{
+    font-size:17px;
+}
+
+.faq-question{
+    padding:22px 25px;
+    font-size:18px;
+}
+
+.faq-answer{
+    padding:0 25px 22px;
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.faq{
+    padding:70px 18px;
+}
+
+.faq .section-title{
+    font-size:32px;
+}
+
+.faq .section-description{
+    font-size:16px;
+}
+
+.faq-question{
+    padding:20px;
+    font-size:17px;
+}
+
+.faq-answer{
+    padding:0 20px 20px;
+}
+
+.faq-answer p{
+    font-size:15px;
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.faq{
+    padding:60px 15px;
+}
+
+.faq .section-tag{
+    font-size:13px;
+    padding:8px 18px;
+}
+
+.faq .section-title{
+    font-size:28px;
+}
+
+.faq .section-description{
+    font-size:15px;
+}
+
+.faq-question{
+    padding:18px;
+    font-size:16px;
+}
+
+.faq-answer{
+    padding:0 18px 18px;
+}
+
+.faq-answer p{
+    font-size:14px;
+}
+
+}

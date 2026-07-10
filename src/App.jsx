@@ -11,6 +11,7 @@ import Workshop from "./components/Workshop/Workshop";
 import Book from "./components/Book/Book";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
 import Community from "./components/Community/Community";
+import FAQ from "./components/FAQ/FAQ";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Workshop />
         <Book />
         <Community />
+        <FAQ />
         <Gallery />
       </main>
     </>
