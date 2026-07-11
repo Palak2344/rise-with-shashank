@@ -164,12 +164,6 @@ function Footer() {
           © {new Date().getFullYear()} Rise with Shashank.
           All Rights Reserved.
         </p>
-        <p>
-          Designed & Developed by
-          <strong>
-            {" "}Palak Choudhary ❤️
-          </strong>
-        </p>
       </div>
     </footer>
   );

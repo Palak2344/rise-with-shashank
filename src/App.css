@@ -1,3 +1,7 @@
+/* ===========================
+   Global Reset
+=========================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,26 +19,85 @@ body {
   overflow-x: hidden;
 }
 
+/* ===========================
+   Common Container
+=========================== */
+
 .container {
   width: 90%;
   max-width: 1300px;
   margin: auto;
 }
 
+/* ===========================
+   Images
+=========================== */
+
 img {
   max-width: 100%;
   display: block;
 }
 
+/* ===========================
+   Buttons
+=========================== */
+
 button {
   cursor: pointer;
   font-family: inherit;
+  border: none;
+  outline: none;
 }
+
+/* ===========================
+   Links
+=========================== */
 
 a {
   text-decoration: none;
+  color: inherit;
 }
+
+/* ===========================
+   Lists
+=========================== */
 
 ul {
   list-style: none;
+}
+
+/* ===========================
+   Fixed Navbar Spacing
+=========================== */
+
+.page-content {
+  width: 100%;
+  padding-top: 110px; /* Height of navbar */
+  min-height: calc(100vh - 110px);
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+  .page-content {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 90px;
+    min-height: calc(100vh - 90px);
+  }
+
+  .container {
+    width: 92%;
+  }
 }
