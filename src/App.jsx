@@ -1,36 +1,43 @@
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Journey from "./components/Journey/Journey";
-import WhyChoose from "./components/WhyChoose/WhyChoose";
-import Programs from "./components/Programs/Programs";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Workshop from "./components/Workshop/Workshop";
-import Book from "./components/Book/Book";
-import Community from "./components/Community/Community";
-import FAQ from "./components/FAQ/FAQ";
-import Contact from "./components/Contact/Contact";
-import Gallery from "./components/Gallery/Gallery";
-import Footer from "./components/Footer/Footer";
+import Layout from "./layouts/Layout";
+import Home from "./pages/Home";
+import ProgramsPage from "./pages/ProgramsPage";
+import WorkshopsPage from "./pages/WorkshopsPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
+import GalleryPage from "./pages/GalleryPage";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
+
 function App() {
   return (
-    <>
-      <Navbar />
+    <Routes>
 
-      <Hero />
-      <Journey />
-      <WhyChoose />
-      <Programs />
-      <Workshop />
-      <Testimonials />
-      <Gallery />
-      <Book />
-      <Community />
-      <FAQ />
-      <Contact />
-      <Footer />  
-    </>
+      <Route element={<Layout />}>
+
+        <Route path="/" element={<Home />} />
+
+        <Route 
+          path="/about" 
+          element={<AboutPage />} 
+        />
+
+        <Route 
+          path="/contact" 
+          element={<ContactPage />} 
+        />
+        <Route path="/programs" element={<ProgramsPage />} />
+
+        <Route path="/workshops" element={<WorkshopsPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+      
+        <Route path="/blog" element={<BlogPage />} />
+      </Route>
+
+    </Routes>
   );
 }
 

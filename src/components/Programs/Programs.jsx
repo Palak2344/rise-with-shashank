@@ -5,6 +5,7 @@ import {
   FaHeart,
   FaUsers,
   FaLeaf,
+  FaLock,
   FaSun,
 } from "react-icons/fa";
 
@@ -46,7 +47,8 @@ function Programs() {
     <section className="programs" id="programs">
       <div className="container">
 
-        {/* Section Header */}
+        {/* Header */}
+
         <div className="program-header">
 
           <span className="section-tag">
@@ -66,8 +68,11 @@ function Programs() {
         </div>
 
         {/* Program Cards */}
+
         <div className="program-grid">
+
           {programs.map((item, index) => (
+
             <div className="program-card" key={index}>
 
               <div className="program-icon">
@@ -78,12 +83,48 @@ function Programs() {
 
               <p>{item.desc}</p>
 
-              <button>
-                Learn More →
-              </button>
-
             </div>
+
           ))}
+
+        </div>
+
+        {/* Pricing Section */}
+
+        <div className="program-cta">
+
+          <span className="cta-tag">
+            Less than the price of a pizza 🍕
+          </span>
+
+          <h2>₹501</h2>
+
+          <p className="cta-subtitle">
+            One-time commitment fee
+          </p>
+
+          <ul className="cta-features">
+            <li>✔ 5 Days of Live Guided Morning Meditation</li>
+            <li>✔ Kickoff Training Session (60 Minutes)</li>
+            <li>✔ Lifetime Access to All Recordings</li>
+            <li>✔ Habit Building Framework</li>
+            <li>✔ Community Support & Accountability</li>
+            <li>✔ Progress Tracking Tools</li>
+          </ul>
+
+<a
+  href="https://pages.razorpay.com/transf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="pay-btn"
+>
+  <FaLock />
+  Pay ₹501 & Reserve Your Spot
+</a>
+          <p className="secure-text">
+            Secure payment via Razorpay • Instant Confirmation
+          </p>
+
         </div>
 
       </div>

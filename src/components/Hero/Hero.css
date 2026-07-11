@@ -1,27 +1,29 @@
-/* ===========================
+/* ==========================================
    HERO SECTION
-=========================== */
+========================================== */
 
 .hero{
-    padding-top:110px;
+    width:100%;
+    padding-top:100px;
     padding-bottom:60px;
     background:#f8f5ef;
 }
 
 .hero-card{
     position:relative;
-    width:calc(100% - 40px);
-    max-width:1800px;
-    height:700px;
+    width:95%;
+    max-width:1500px;
+    height:720px;
     margin:0 auto;
-    border-radius:35px;
+    border-radius:30px;
     overflow:hidden;
-    box-shadow:0 15px 45px rgba(0,0,0,.12);
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
 }
 
 .hero-bg{
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     object-fit:cover;
@@ -32,51 +34,58 @@
     inset:0;
     background:linear-gradient(
         90deg,
-        rgba(255,248,238,.92) 0%,
-        rgba(255,248,238,.75) 35%,
-        rgba(255,248,238,.18) 65%,
+        rgba(248,245,239,.95) 0%,
+        rgba(248,245,239,.75) 35%,
+        rgba(248,245,239,.25) 65%,
         rgba(0,0,0,.10) 100%
     );
 }
 
 .hero-content{
     position:relative;
-    z-index:5;
+    z-index:2;
+    width:100%;
     height:100%;
+
     display:flex;
     align-items:center;
+
     padding:0 90px;
 }
 
 .hero-text{
-    max-width:620px;
+    max-width:650px;
 }
 
 .hero-badge{
     display:inline-block;
+    padding:12px 25px;
     background:#fff;
     color:#c58a22;
-    padding:12px 24px;
     border-radius:50px;
+    font-size:16px;
     font-weight:600;
-    font-size:17px;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .hero h1{
     margin-top:25px;
-    font-size:72px;
-    line-height:1.08;
+    font-size:68px;
+    line-height:1.1;
     color:#111;
+    font-weight:700;
 }
 
 .hero p{
     margin-top:25px;
     font-size:19px;
     line-height:1.8;
-    color:#333;
-    max-width:580px;
+    color:#444;
 }
+
+/* ==========================================
+   BUTTONS
+========================================== */
 
 .hero-buttons{
     margin-top:40px;
@@ -87,15 +96,23 @@
 
 .primary-btn,
 .secondary-btn{
-    padding:18px 34px;
-    border-radius:10px;
-    font-size:17px;
     display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
+
+    padding:18px 34px;
+
+    border-radius:12px;
+
+    font-size:17px;
+    font-weight:600;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:all .35s ease;
+
+    text-decoration:none;
 }
 
 .primary-btn{
@@ -106,220 +123,203 @@
 
 .primary-btn:hover{
     background:#af7718;
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(197,138,34,.35);
 }
 
 .secondary-btn{
     background:#fff;
-    border:2px solid #c58a22;
     color:#111;
+    border:2px solid #c58a22;
 }
 
 .secondary-btn:hover{
     background:#c58a22;
     color:#fff;
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(197,138,34,.25);
 }
 
-.hero-arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:55px;
-    height:55px;
-    border:none;
-    border-radius:50%;
-    background:#fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    cursor:pointer;
-    z-index:20;
-}
+/* ==========================================
+   LARGE LAPTOP
+========================================== */
 
-.hero-arrow.left{
-    left:25px;
-}
-
-.hero-arrow.right{
-    right:25px;
-}
-
-/* ===========================
-   Large Laptop
-=========================== */
-
-@media(max-width:1400px){
+@media (max-width:1400px){
 
 .hero-card{
-height:620px;
+    height:650px;
 }
 
 .hero-content{
-padding:0 70px;
+    padding:0 70px;
 }
 
 .hero h1{
-font-size:60px;
+    font-size:58px;
 }
 
 .hero p{
-font-size:18px;
+    font-size:18px;
 }
 
 }
 
-/* ===========================
-   Laptop
-=========================== */
+/* ==========================================
+   LAPTOP
+========================================== */
 
-@media(max-width:1200px){
+@media (max-width:1200px){
 
 .hero-card{
-height:560px;
+    height:600px;
 }
 
 .hero-content{
-padding:0 60px;
+    padding:0 60px;
 }
 
 .hero h1{
-font-size:52px;
+    font-size:52px;
 }
 
 .hero p{
-font-size:17px;
+    font-size:17px;
 }
 
 }
 
-/* ===========================
-   Tablet
-=========================== */
+/* ==========================================
+   TABLET
+========================================== */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .hero{
-padding-top:95px;
+    padding-top:90px;
 }
 
 .hero-card{
-height:560px;
-width:calc(100% - 30px);
-border-radius:25px;
+    height:560px;
+    width:95%;
 }
 
 .hero-content{
-padding:40px;
-justify-content:center;
-text-align:center;
+    padding:40px;
+    justify-content:center;
+    text-align:center;
 }
 
 .hero-text{
-max-width:100%;
+    max-width:100%;
 }
 
 .hero h1{
-font-size:46px;
+    font-size:44px;
 }
 
 .hero p{
-max-width:100%;
-font-size:17px;
+    max-width:100%;
 }
 
 .hero-buttons{
-justify-content:center;
-}
-
-.hero-arrow{
-display:none;
+    justify-content:center;
 }
 
 }
 
-/* ===========================
-   Mobile
-=========================== */
+/* ==========================================
+   MOBILE
+========================================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .hero{
-padding-top:85px;
-padding-bottom:30px;
+    padding-top:80px;
+    padding-bottom:40px;
 }
 
 .hero-card{
-height:auto;
-min-height:620px;
-width:calc(100% - 20px);
-border-radius:20px;
+    width:100%;
+    height:auto;
+    min-height:620px;
+    border-radius:0;
+}
+
+.hero-overlay{
+    background:rgba(248,245,239,.82);
 }
 
 .hero-content{
-padding:40px 25px;
+    padding:40px 25px;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-text{
+    max-width:100%;
 }
 
 .hero h1{
-font-size:38px;
-line-height:1.15;
+    font-size:36px;
+    line-height:1.2;
 }
 
 .hero p{
-font-size:16px;
-line-height:1.7;
-margin-top:20px;
+    font-size:16px;
+    line-height:1.7;
 }
 
 .hero-buttons{
-margin-top:30px;
-flex-direction:column;
-width:100%;
+    flex-direction:column;
+    width:100%;
 }
 
 .primary-btn,
 .secondary-btn{
-width:100%;
-}
-
-.hero-badge{
-font-size:15px;
-padding:10px 20px;
+    width:100%;
 }
 
 }
 
-/* ===========================
-   Small Mobile
-=========================== */
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-.hero-card{
-width:100%;
-border-radius:0;
+.hero{
+    padding-top:70px;
 }
 
 .hero-content{
-padding:30px 18px;
+    padding:30px 20px;
 }
 
 .hero h1{
-font-size:30px;
+    font-size:30px;
 }
 
 .hero p{
-font-size:15px;
+    font-size:15px;
 }
 
-.hero-buttons{
-gap:14px;
+.hero-badge{
+    font-size:14px;
+    padding:10px 18px;
 }
 
 .primary-btn,
 .secondary-btn{
-padding:16px;
-font-size:15px;
+    padding:16px;
+    font-size:15px;
 }
 
-.hero-badge{
-font-size:14px;
 }
 
+/* ==========================================
+   SMOOTH SCROLL
+========================================== */
+
+html{
+    scroll-behavior:smooth;
 }

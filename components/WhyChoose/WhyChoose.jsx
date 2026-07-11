@@ -10,17 +10,8 @@ import {
 
 function WhyChoose() {
   return (
-    <section className="why">
-      <div className="container why-container">
-
-        <div className="why-image">
-          <img src="/images/profile.jpg" alt="Shashank" />
-
-          <div className="experience">
-            <h2>10+</h2>
-            <p>Years Experience</p>
-          </div>
-        </div>
+    <section className="why" id="why">
+      <div className="container">
 
         <div className="why-content">
 

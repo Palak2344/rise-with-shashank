@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 import {
   FaInstagram,
@@ -7,29 +8,28 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-container">
         {/* Company */}
-
         <div className="footer-col">
-          <div className="footer-logo">
-            <img src="/images/logo.png" alt="Rise with Shashank" />
-
+          <Link to="/" className="footer-logo">
+            <img
+              src="/images/logo.png"
+              alt="Rise with Shashank"
+            />
             <div>
               <h3>Rise with</h3>
               <h2>SHASHANK</h2>
             </div>
-          </div>
-
+          </Link>
           <p>
-            We shall make you fall in love with yourself. Helping people
-            discover mindfulness, confidence, inner peace, and purposeful
-            living.
-          </p>
+            We shall make you fall in love with yourself.
+            Helping people discover mindfulness,
+            confidence, inner peace and purposeful living.
 
+          </p>
           <div className="footer-social">
             <a
               href="https://www.instagram.com/shashanklalwani/"
@@ -38,7 +38,6 @@ function Footer() {
             >
               <FaInstagram />
             </a>
-
             <a
               href="https://wa.me/919109694003"
               target="_blank"
@@ -48,90 +47,131 @@ function Footer() {
             </a>
           </div>
         </div>
-
         {/* Quick Links */}
-
         <div className="footer-col">
           <h3>Quick Links</h3>
-
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link to="/">
+                Home
+              </Link>
             </li>
-
             <li>
-              <a href="#journey">Journey</a>
+              <Link to="/about">
+                About
+              </Link>
             </li>
-
             <li>
-              <a href="#programs">Programs</a>
+              <Link to="/programs">
+                Programs
+              </Link>
             </li>
-
             <li>
-              <a href="#workshop">Workshop</a>
+              <Link to="/workshops">
+                Workshops
+              </Link>
             </li>
-
             <li>
-              <a href="#testimonials">Testimonials</a>
+              <Link to="/gallery">
+                Gallery
+              </Link>
             </li>
-
             <li>
-              <a href="#gallery">Gallery</a>
+              <Link to="/blog">
+                Blog
+              </Link>
             </li>
-
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/testimonials">
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
-
         {/* Programs */}
-
         <div className="footer-col">
           <h3>Programs</h3>
-
           <ul>
-            <li>Meditation</li>
-            <li>Mindfulness</li>
-            <li>Emotional Healing</li>
-            <li>Life Transformation</li>
-            <li>Relationship Coaching</li>
-            <li>Wellness Workshops</li>
+            <li>
+              <Link to="/programs">
+                Meditation
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs">
+                Mindfulness
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs">
+                Emotional Healing
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs">
+                Life Transformation
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs">
+                Relationship Coaching
+              </Link>
+            </li>
+            <li>
+              <Link to="/programs">
+                Wellness Workshops
+              </Link>
+            </li>
           </ul>
         </div>
-
         {/* Contact */}
-
         <div className="footer-col">
-          <h3>Contact</h3>
-
+          <h3>
+            Contact
+          </h3>
           <p>
-            <FaPhoneAlt /> <span>+91 9109694003</span>
+            <FaPhoneAlt />
+            <a href="tel:+919109694003">
+              +91 9109694003
+            </a>
           </p>
-
           <p>
-            <FaEnvelope /> <span>shashank.lalwani@gmail.com</span>
+            <FaEnvelope />
+            <a href="mailto:shashank.lalwani@gmail.com">
+              shashank.lalwani@gmail.com
+            </a>
           </p>
-
           <p>
-            <FaMapMarkerAlt /> <span>India</span>
+            <FaMapMarkerAlt />
+            <a
+              href="https://maps.google.com/?q=India"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              India
+            </a>
           </p>
         </div>
       </div>
-
       {/* Bottom Footer */}
-
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} Rise with Shashank. All Rights Reserved.
+          © {new Date().getFullYear()} Rise with Shashank.
+          All Rights Reserved.
         </p>
-
         <p>
-          Designed & Developed by <strong>Palak Choudhary ❤️</strong>
+          Designed & Developed by
+          <strong>
+            {" "}Palak Choudhary ❤️
+          </strong>
         </p>
       </div>
     </footer>
   );
 }
-
 export default Footer;

@@ -8,7 +8,7 @@ import {
 
 function Journey() {
   return (
-    <section className="journey">
+  <section className="journey" id="about">
 
       <div className="container journey-container">
 

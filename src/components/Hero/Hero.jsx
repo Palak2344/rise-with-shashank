@@ -1,16 +1,26 @@
 import "./Hero.css";
-import { FaArrowRight, FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowRight, FaPlay } from "react-icons/fa";
 
 function Hero() {
+
+  const scrollToPrograms = () => {
+    const section = document.getElementById("programs");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="hero">
 
       <div className="hero-card">
 
-
         <img
           src="/images/hero.jpeg"
-          alt="Meditation"
+          alt="Rise With Shashank"
           className="hero-bg"
         />
 
@@ -36,7 +46,10 @@ function Hero() {
 
             <div className="hero-buttons">
 
-              <button className="primary-btn">
+              <button
+                className="primary-btn"
+                onClick={scrollToPrograms}
+              >
                 Explore Programs
                 <FaArrowRight />
               </button>
@@ -51,8 +64,6 @@ function Hero() {
           </div>
 
         </div>
-
-  
 
       </div>
 

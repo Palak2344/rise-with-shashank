@@ -1,63 +1,36 @@
-import "./Hero.css";
-import { FaArrowRight, FaPlay } from "react-icons/fa";
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
+import Journey from "../components/Journey/Journey";
+import WhyChoose from "../components/WhyChoose/WhyChoose";
+import Programs from "../components/Programs/Programs";
+import Workshop from "../components/Workshop/Workshop";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Gallery from "../components/Gallery/Gallery";
+import Book from "../components/Book/Book";
+import Blog from "../components/Blog/Blog";
+import Community from "../components/Community/Community";
+import FAQ from "../components/FAQ/FAQ";
+import Contact from "../components/Contact/Contact";
 
-function Hero() {
+export default function Home() {
   return (
-    <section className="hero">
-
-      {/* Background Image */}
-      <img
-        src="/hero.jpg"
-        alt="Meditation Hero"
-        className="hero-image"
-      />
-
-      {/* Dark Overlay */}
-      <div className="hero-overlay"></div>
-
-      <div className="container hero-content">
-
-        <div className="hero-left">
-
-          <span className="hero-tag">
-            ✨ Transform Your Life
-          </span>
-
-          <h1>
-            Discover
-            <span> Inner Peace </span>
-            Through Meditation &
-            Mindfulness
-          </h1>
-
-          <p>
-            Join <strong>Rise with Shashank</strong> and begin a journey of
-            emotional healing, mindfulness, confidence, and self-discovery.
-            Experience powerful workshops, guided meditation, and personal
-            transformation designed to help you live a happier and more
-            meaningful life.
-          </p>
-
-          <div className="hero-buttons">
-
-            <button className="primary-btn">
-              Explore Programs
-              <FaArrowRight />
-            </button>
-
-            <button className="secondary-btn">
-              <FaPlay />
-              Watch Intro
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Journey />
+      <WhyChoose />
+      <Programs />
+      <Workshop />
+      <Testimonials />
+      <Gallery />
+      <Book />
+      <Blog />
+      <Community />
+      <FAQ />
+      <Contact />
+  
+    </>
   );
 }
-
-export default Hero;
