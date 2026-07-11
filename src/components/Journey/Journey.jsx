@@ -20,7 +20,7 @@ function Journey() {
           />
 
           <div className="experience-card">
-            <h2>15</h2>
+            <h2>15+</h2>
             <p>Years of Inspiring Lives</p>
           </div>
 
