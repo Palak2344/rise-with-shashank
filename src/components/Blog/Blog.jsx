@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Blog.css";
 
 const blogs = [
@@ -9,7 +10,7 @@ const blogs = [
     image: "/images/self.jpg",
     description:
       "Self-love is the foundation of a happier and healthier life. Discover the four essential pillars of self-care—physical, emotional, social, and mental—and learn simple daily practices to nurture yourself and create lasting inner well-being. Discover how mindfulness can reduce stress, improve focus, and help you live with greater clarity and peace.",
-    link: "https://fitmind.in/blog_post/42c4c856-5882-4521-bd04-fb76265f649c22",
+          path: "/blog/self-love",
   },
   {
     id: 2,
@@ -19,7 +20,7 @@ const blogs = [
     image: "/images/balance.webp",
     description:
       "Achieving a healthy work-life balance isn't about dividing your time equally—it's about creating harmony between your professional responsibilities and personal well-being. Discover practical tips to reduce stress, prevent burnout, and live a more balanced life.",
-    link: "https://fitmind.in/blog_post/99e703a4-04eb-4e88-9c3a-684f18d86d5b",
+    path: "/blog/meditation-emotional-wellbeing",
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const blogs = [
     image: "/images/resolutions.webp",
     description:
       "Success isn't built on resolutions alone—it's built on consistent action. Discover six practical strategies to set meaningful goals, stay motivated, and turn your New Year resolutions into lasting habits throughout the year.",
-    link: "https://fitmind.in/blog_post/9d82d671-8fae-499c-a5ea-57cd3973e13a",
+    path: "/blog/finding-peace-within-yourself",
   },
 ];
 
@@ -75,14 +76,9 @@ const Blog = () => {
 
                   <span>{blog.readTime}</span>
 
-                  <a
-                    href={blog.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read Full Article →
-                  </a>
-
+                 <Link to={blog.path}>
+  Read Full Article →
+</Link> 
                 </div>
 
               </div>
