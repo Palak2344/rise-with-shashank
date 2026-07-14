@@ -4,7 +4,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaFacebook,
-  FaTelegramPlane,
+  FaLinkedin,
 } from "react-icons/fa";
 
 function Community() {
@@ -40,26 +40,30 @@ function Community() {
             <p>Daily motivation, meditation reminders and support.</p>
           </a>
 
-          <a
-            href="#"
-            className="community-card"
-          >
-            <FaTelegramPlane />
-            <h3>Telegram</h3>
-            <p>Exclusive resources and guided meditation sessions.</p>
-          </a>
-
-          <a
-            href="#"
+       <a
+            href="https://www.youtube.com/@bkshashank"
             className="community-card"
           >
             <FaYoutube />
             <h3>YouTube</h3>
             <p>Watch meditation videos and transformational talks.</p>
           </a>
+          <a
+           href="https://www.linkedin.com/in/shashanklalwani/"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="community-card"
+>
+  <FaLinkedin />
+  <h3>LinkedIn</h3>
+  <p>
+    Connect with Shashank Lalwani for professional insights,
+    mindfulness articles, career guidance, and personal growth content.
+  </p>
+</a>
 
           <a
-            href="#"
+            href="https://www.instagram.com/shashanklalwani/"
             className="community-card"
           >
             <FaInstagram />
@@ -68,7 +72,7 @@ function Community() {
           </a>
 
           <a
-            href="#"
+            href="https://www.facebook.com/bkshashank"
             className="community-card"
           >
             <FaFacebook />

@@ -75,6 +75,56 @@
   font-size: 14px;
   font-weight: 500;
 }
+.blog-header{
+    max-width:900px;
+    margin:60px auto 20px;
+    padding:0 25px;
+    text-align:center;
+}
+
+.blog-header .category{
+    display:inline-block;
+    padding:8px 20px;
+    background:#7A8F78;
+    color:#fff;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.blog-header h1{
+    font-size:48px;
+    color:#3E4A45;
+    margin-bottom:18px;
+    line-height:1.2;
+}
+
+.blog-header .meta{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    color:#6B6B6B;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+.blog-header{
+    margin:40px auto 10px;
+}
+
+.blog-header h1{
+    font-size:34px;
+}
+
+.blog-header .meta{
+    gap:10px;
+    font-size:14px;
+}
+
+}
 
 /* =====================================================
    ARTICLE

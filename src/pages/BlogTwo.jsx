@@ -4,7 +4,7 @@ export default function BlogTwo() {
   return (
     <div className="blog-details">
 
-      {/* Hero */}
+      {/* HERO */}
 
       <section
         className="blog-hero"
@@ -29,180 +29,186 @@ export default function BlogTwo() {
         </div>
       </section>
 
+      {/* ARTICLE */}
+
       <div className="blog-container">
 
-        {/* Intro */}
+        <p className="intro">
+          We often hear the phrase <strong>"Healthy Work-Life Balance"</strong>,
+          but what does it truly mean? It is about creating harmony between
+          your professional responsibilities and your personal well-being.
+        </p>
 
-        <section className="intro-card">
+        <p>
+          A healthy balance allows you to grow in your career while still
+          taking care of your health, relationships, and happiness.
+        </p>
 
-          <h2>
-            What is Work-Life Balance?
-          </h2>
+        <blockquote>
+          "Success becomes meaningful only when your career and personal life grow together."
+        </blockquote>
 
-          <p>
-            Work-life balance is about maintaining harmony between your
-            professional responsibilities and your personal well-being.
-            Success becomes meaningful when both your career and your
-            personal life grow together.
-          </p>
+        {/* Professional */}
 
-          <blockquote>
-            "Success becomes meaningful only when your career and personal life grow together."
-          </blockquote>
+        <h2>Professional Life Includes</h2>
 
-        </section>
+        <p>
+          Your professional life is the part of your journey that focuses on
+          building your career, achieving goals, and becoming the best version
+          of yourself at work.
+        </p>
 
-        {/* Card */}
+        <ul>
+          <li>Career ambitions</li>
+          <li>Professional growth</li>
+          <li>Meeting goals</li>
+          <li>Learning new skills</li>
+          <li>Improving productivity</li>
+        </ul>
 
-        <section className="blog-card">
+        {/* Personal */}
 
-          <h2>Professional Life Includes</h2>
+        <h2>Personal Life Includes</h2>
 
-          <ul>
-            <li>Career ambitions</li>
-            <li>Professional growth</li>
-            <li>Meeting goals</li>
-            <li>Learning new skills</li>
-            <li>Improving productivity</li>
-          </ul>
+        <p>
+          Personal life is equally important because it helps you stay mentally,
+          emotionally, and physically healthy.
+        </p>
 
-        </section>
+        <ul>
+          <li>Physical health</li>
+          <li>Mental wellness</li>
+          <li>Family time</li>
+          <li>Friends and relationships</li>
+          <li>Hobbies & leisure</li>
+          <li>Spiritual growth</li>
+        </ul>
 
-        {/* Card */}
+        {/* Healthy Balance */}
 
-        <section className="blog-card">
+        <h2>What Does a Healthy Work-Life Balance Look Like?</h2>
 
-          <h2>Personal Life Includes</h2>
+        <p>
+          A healthy work-life balance doesn't mean dividing your time equally.
+          It means giving enough attention to both your work and your personal
+          life so that neither suffers.
+        </p>
 
-          <ul>
-            <li>Physical health</li>
-            <li>Mental wellness</li>
-            <li>Family time</li>
-            <li>Friends and relationships</li>
-            <li>Hobbies & leisure</li>
-            <li>Spiritual growth</li>
-          </ul>
+        <ul>
+          <li>Complete work without constant stress.</li>
+          <li>Sleep peacefully every night.</li>
+          <li>Enjoy vacations without worrying about work.</li>
+          <li>Spend quality time with your family.</li>
+          <li>Exercise regularly.</li>
+          <li>Feel mentally calm and emotionally balanced.</li>
+        </ul>
 
-        </section>
+        {/* Poor Balance */}
 
-        {/* Card */}
+        <h2>Signs of Poor Work-Life Balance</h2>
 
-        <section className="blog-card">
+        <p>
+          An unhealthy work-life balance often leads to burnout, anxiety, and
+          poor relationships. Recognizing these signs early can help you make
+          positive changes.
+        </p>
 
-          <h2>
-            What Does a Healthy Balance Look Like?
-          </h2>
-
-          <ul>
-            <li>Complete work without constant stress.</li>
-            <li>Sleep peacefully every night.</li>
-            <li>Enjoy vacations without worrying about work.</li>
-            <li>Spend quality time with family.</li>
-            <li>Exercise regularly.</li>
-            <li>Feel mentally calm and emotionally balanced.</li>
-          </ul>
-
-        </section>
-
-        {/* Highlight */}
-
-        <section className="highlight-box">
-
-          <h2>
-            Signs of Poor Work-Life Balance
-          </h2>
-
-          <ul>
-            <li>Constant stress.</li>
-            <li>Long working hours.</li>
-            <li>Weekend work.</li>
-            <li>Poor sleep.</li>
-            <li>Burnout.</li>
-            <li>Family relationships suffering.</li>
-            <li>No time for yourself.</li>
-          </ul>
-
-        </section>
+        <ul>
+          <li>Constant stress</li>
+          <li>Working long hours every day</li>
+          <li>Working during weekends</li>
+          <li>Poor sleep quality</li>
+          <li>Feeling exhausted all the time</li>
+          <li>Family relationships suffering</li>
+          <li>No personal time</li>
+        </ul>
 
         {/* Tips */}
 
-        <section className="blog-card">
+        <h2>How to Improve Your Work-Life Balance</h2>
 
-          <h2>How to Improve Your Balance</h2>
+        <h3>1. Pause & Reflect</h3>
 
-          <h3>1. Pause & Reflect</h3>
+        <p>
+          Ask yourself what is causing stress and what changes you need to make.
+        </p>
 
-          <p>
-            Identify what is creating stress and what needs to change.
-          </p>
+        <h3>2. Prioritize What Matters</h3>
 
-          <h3>2. Prioritize</h3>
+        <p>
+          Focus on important tasks instead of trying to do everything at once.
+        </p>
 
-          <p>
-            Focus on the things that truly matter instead of trying to do everything.
-          </p>
+        <h3>3. Stop Procrastinating</h3>
 
-          <h3>3. Stop Procrastinating</h3>
+        <p>
+          Taking action is the first step toward building a healthier life.
+        </p>
 
-          <p>
-            Action creates positive change.
-          </p>
+        <h3>4. Build Healthy Daily Habits</h3>
 
-          <h3>4. Build Healthy Habits</h3>
+        <ul>
+          <li>Exercise regularly.</li>
+          <li>Meditate every day.</li>
+          <li>Drink enough water.</li>
+          <li>Take regular breaks while working.</li>
+          <li>Use the Pomodoro Technique.</li>
+          <li>Learn to say "No" when necessary.</li>
+        </ul>
 
-          <ul>
-            <li>Exercise daily</li>
-            <li>Meditate every morning</li>
-            <li>Drink enough water</li>
-            <li>Take regular breaks</li>
-            <li>Use the Pomodoro Technique</li>
-            <li>Learn to say No</li>
-          </ul>
-
-        </section>
-
-        {/* Quote */}
-
-        <section className="quote-card">
-
-          <blockquote>
-            "Balance isn't about dividing your time equally—it's about giving each part of your life the attention it deserves."
-          </blockquote>
-
-        </section>
+        <blockquote>
+          "Balance isn't about dividing your time equally—it's about giving each part of your life the attention it deserves."
+        </blockquote>
 
         {/* Conclusion */}
 
-        <section className="conclusion">
+        <h2>Final Thoughts</h2>
 
-          <h2>Final Thoughts</h2>
+        <p>
+          A healthy work-life balance isn't about working less—it's about
+          working smarter while protecting your physical, emotional, and mental
+          well-being.
+        </p>
 
-          <p>
-            A healthy work-life balance isn't about working less—it's about
-            working smarter while protecting your physical, emotional, and
-            mental well-being.
-          </p>
+        <p>
+          Remember, your health, happiness, and relationships are just as
+          valuable as your career. When you nurture both sides of life,
+          success becomes truly meaningful.
+        </p>
 
-          <p>
-            Remember, your health, happiness, and relationships are just as
-            valuable as your career. When you nurture both sides of life,
-            success becomes truly meaningful.
-          </p>
+        <p>
+          Small daily habits create long-term balance. Start with one positive
+          change today and continue building a lifestyle that supports both
+          your personal happiness and professional success.
+        </p>
 
-          <a
-            href="https://pages.razorpay.com/heal1"
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            Book a Session
-          </a>
+        <blockquote>
+          "Your career is a part of your life—not your entire life."
+        </blockquote>
 
-          <p className="ending">
-            Cheers and have a wonderful day! 🌿
-          </p>
+        <p>
+          If you need guidance in creating a healthier and more fulfilling
+          lifestyle, don't hesitate to reach out.
+        </p>
 
-        </section>
+        <a
+          href="https://pages.razorpay.com/heal1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+        >
+          Book a Session
+        </a>
+
+        <p
+          style={{
+            marginTop: "35px",
+            textAlign: "center",
+            fontWeight: "600",
+          }}
+        >
+          Cheers and have a wonderful day! 🌿
+        </p>
 
       </div>
 
