@@ -4,16 +4,20 @@ export default function BlogThree() {
   return (
     <div className="blog-details">
 
-      {/* Hero Section */}
-     <section
-  className="blog-hero"
-  style={{
-    backgroundImage:
-      "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/resolutions.webp')",
-  }}
->
+      {/* Hero */}
+
+      <section
+        className="blog-hero"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/resolutions.webp')",
+        }}
+      >
         <div className="overlay">
-          <span className="category">Personal Growth</span>
+
+          <span className="category">
+            Personal Growth
+          </span>
 
           <h1>New Year Resolutions and How to Nail It</h1>
 
@@ -22,142 +26,159 @@ export default function BlogThree() {
             <span>Jan 09, 2022</span>
             <span>6 min read</span>
           </div>
+
         </div>
       </section>
 
       <div className="blog-container">
 
-        <p className="intro">
-          Every new year begins with excitement, hope, and a fresh list of
-          resolutions. However, as the weeks pass, motivation often fades and
-          many of us return to our old habits.
-        </p>
+        {/* Introduction */}
 
-        <blockquote>
-          "Success is not built on motivation alone—it's built on consistent
-          action."
-        </blockquote>
+        <section className="intro-card">
 
-        <p>
-          If you're determined to make this year different, these six simple
-          life hacks can help you stay committed and achieve your goals.
-        </p>
+          <h2>Every New Year is a New Beginning</h2>
+
+          <p>
+            Every new year begins with excitement, hope, and a fresh list of
+            resolutions. Unfortunately, motivation fades quickly for many
+            people, and old habits return.
+          </p>
+
+          <blockquote>
+            "Success is not built on motivation alone—it's built on consistent action."
+          </blockquote>
+
+          <p>
+            If you're determined to make this year different, these six
+            powerful habits will help you stay committed and achieve your goals.
+          </p>
+
+        </section>
 
         {/* Goal Setting */}
 
         <section className="blog-card">
-          <h2>1. Set Tangible Goals</h2>
+
+          <h2>1. Set Clear & Tangible Goals</h2>
 
           <p>
-            Many people either postpone setting goals or struggle because they
-            aren't sure what they truly want. Even when they know their goals,
-            self-doubt often gets in the way.
+            Goals provide direction. Instead of keeping them in your mind,
+            write them down and create a realistic action plan.
           </p>
 
-          <h3>Here's what you can do:</h3>
-
           <ul>
-            <li>Write down your Top 10 goals for the year.</li>
-            <li>Choose your Top 3 priorities for the next quarter.</li>
-            <li>Perform a Life Audit to understand where you currently stand.</li>
-            <li>Create a practical action plan to achieve those goals.</li>
+            <li>Write your Top 10 yearly goals.</li>
+            <li>Select your Top 3 priorities.</li>
+            <li>Perform a Life Audit.</li>
+            <li>Create a monthly action plan.</li>
           </ul>
+
         </section>
 
         {/* Gratitude */}
 
         <section className="blog-card">
-          <h2>2. Practice Gratitude for Your Goals</h2>
+
+          <h2>2. Practice Gratitude</h2>
 
           <p>
-            Instead of waiting for success, begin living with gratitude as if
-            you've already achieved your goals.
+            Instead of waiting for success, feel grateful as though you've
+            already achieved your dreams.
           </p>
-
-          <h3>Examples:</h3>
 
           <ul>
-            <li>I'm grateful to move into my new home by March.</li>
-            <li>I'm grateful to receive my dream job.</li>
-            <li>I'm grateful to have a healthy and fit body.</li>
+            <li>I'm grateful for my dream job.</li>
+            <li>I'm grateful for a healthy body.</li>
+            <li>I'm grateful for financial abundance.</li>
+            <li>I'm grateful for inner peace.</li>
           </ul>
 
-          <p>
-            Visualize your success every day and experience the emotions
-            associated with achieving it.
-          </p>
         </section>
 
         {/* Health */}
 
-        <section className="blog-card">
-          <h2>3. Prioritize Your Health</h2>
+        <section className="highlight-box">
 
-          <p>
-            Your health is your greatest investment. Without it, achieving your
-            dreams becomes much more difficult.
-          </p>
+          <h2>Your Health is Your Greatest Investment</h2>
 
           <ul>
-            <li>Eat healthy and balanced meals.</li>
-            <li>Exercise at least three times a week.</li>
-            <li>Meditate regularly.</li>
-            <li>Get enough sleep.</li>
-            <li>Take time to relax and recharge.</li>
+            <li>Eat nutritious food.</li>
+            <li>Exercise consistently.</li>
+            <li>Meditate daily.</li>
+            <li>Sleep 7–8 hours.</li>
+            <li>Relax and recharge regularly.</li>
           </ul>
+
         </section>
 
         {/* Focus */}
 
         <section className="blog-card">
+
           <h2>4. Stay Focused</h2>
 
           <p>
-            Modern distractions constantly compete for our attention and reduce
-            our productivity.
+            Modern distractions steal your time and energy. Protect your focus
+            every single day.
           </p>
 
           <ul>
-            <li>Avoid unnecessary social media scrolling.</li>
-            <li>Limit distractions from notifications.</li>
-            <li>Stay committed to your priorities.</li>
-            <li>Use the Pomodoro Technique to improve productivity.</li>
+            <li>Avoid endless social media scrolling.</li>
+            <li>Turn off unnecessary notifications.</li>
+            <li>Work on your highest priorities first.</li>
+            <li>Use the Pomodoro Technique.</li>
           </ul>
+
         </section>
 
         {/* Consistency */}
 
         <section className="blog-card">
-          <h2>5. Be Consistent</h2>
+
+          <h2>5. Stay Consistent</h2>
 
           <p>
-            Results may not appear immediately, but consistency always pays off.
-            Every small effort moves you closer to your goal.
+            Progress isn't always visible immediately, but every small step
+            moves you closer to success.
           </p>
 
           <ul>
-            <li>Keep showing up every day.</li>
-            <li>Don't quit when progress feels slow.</li>
+            <li>Show up every day.</li>
             <li>Trust the process.</li>
+            <li>Never quit too early.</li>
+            <li>Celebrate small wins.</li>
           </ul>
+
         </section>
 
-        {/* Growth */}
+        {/* Self Investment */}
 
         <section className="blog-card">
+
           <h2>6. Invest in Yourself</h2>
 
           <p>
-            Personal growth requires continuous learning and guidance.
+            The best investment you'll ever make is in your own growth.
           </p>
 
           <ul>
             <li>Read inspiring books.</li>
-            <li>Watch educational videos.</li>
-            <li>Attend seminars and workshops.</li>
-            <li>Learn from mentors and coaches.</li>
-            <li>Seek help whenever you feel stuck.</li>
+            <li>Attend workshops.</li>
+            <li>Learn from mentors.</li>
+            <li>Develop new skills.</li>
+            <li>Seek coaching when needed.</li>
           </ul>
+
+        </section>
+
+        {/* Quote */}
+
+        <section className="quote-card">
+
+          <blockquote>
+            "If you sacrifice your goals temporarily, your goals will sacrifice you permanently."
+          </blockquote>
+
         </section>
 
         {/* Conclusion */}
@@ -167,17 +188,14 @@ export default function BlogThree() {
           <h2>Final Thoughts</h2>
 
           <p>
-            These six habits can completely transform your life within a year if
-            you remain committed and consistent.
+            These six habits can completely transform your life if practiced
+            consistently. Real change doesn't happen overnight—it happens
+            through small actions repeated every day.
           </p>
 
-          <blockquote>
-            "If you sacrifice your goals temporarily, your goals will sacrifice
-            you permanently."
-          </blockquote>
-
           <p>
-            Believe in yourself, stay disciplined, and never stop growing.
+            Believe in yourself, stay disciplined, and never stop learning.
+            Your future is created by the choices you make today.
           </p>
 
           <a
@@ -189,7 +207,7 @@ export default function BlogThree() {
             Book a Session
           </a>
 
-          <p style={{ marginTop: "30px", fontWeight: "600" }}>
+          <p className="ending">
             Go Nail It ❤️
           </p>
 

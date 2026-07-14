@@ -1,90 +1,97 @@
 .gallery{
     padding:100px 0;
-    background:#fff;
+    background:#EEE6DA;
 }
 
 /* ===========================
    HEADER
 =========================== */
 
-.gallery-header{
-    text-align:center;
-    margin-bottom:60px;
+.gallery-header {
+    text-align: center;
+    margin-bottom: 70px;
 }
-
 .section-tag{
     display:inline-block;
-    background:#fdf5ea;
-    color:#c58a22;
+    background:#F8F5EF;
+    color:#7A8F78;
     padding:10px 22px;
     border-radius:30px;
     font-weight:600;
     margin-bottom:20px;
+    border:1px solid rgba(122,143,120,.2);
 }
 
-.section-title{
-    font-size:52px;
-    color:#111;
-    margin-bottom:20px;
+.section-title {
+    font-size: 52px;
+      color:#3E4A45;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
-.section-title span{
-    color:#c58a22;
-}
+.section-title span {
+  color:#7A8F78;
 
+}
 .section-description{
     max-width:760px;
     margin:0 auto;
-    color:#666;
+    color:#6B756E;
     font-size:18px;
     line-height:1.8;
 }
-
 /* ===========================
    GALLERY GRID
 =========================== */
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
 }
 
 /* ===========================
-   GALLERY ITEM
+   GALLERY CARD
 =========================== */
-
 .gallery-item{
     overflow:hidden;
     border-radius:22px;
     cursor:pointer;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    background:#F8F5EF;
+    border:1px solid rgba(122,143,120,.15);
+    box-shadow:0 12px 30px rgba(62,74,69,.08);
     transition:.4s;
-    background:#fff;
 }
 
 .gallery-item:hover{
     transform:translateY(-8px);
-    box-shadow:0 18px 45px rgba(0,0,0,.15);
+    box-shadow:0 18px 40px rgba(62,74,69,.15);
 }
 
-.gallery-item img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    display:block;
-    transition:.6s ease;
+.gallery-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: .6s ease;
 }
 
-.gallery-item:hover img{
-    transform:scale(1.08);
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Optional Gold Border on Hover */
+
+.gallery-item:hover {
+    border-color: #C58A22;
 }
 
 /* ===========================
-   LAPTOP
+   DESKTOP
 =========================== */
 
-@media(max-width:1200px){
+@media (max-width:1200px){
 
 .gallery{
     padding:90px 20px;
@@ -109,7 +116,7 @@
    TABLET
 =========================== */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .gallery{
     padding:80px 20px;
@@ -138,7 +145,7 @@
    MOBILE
 =========================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .gallery{
     padding:70px 18px;
@@ -147,6 +154,10 @@
 .gallery-grid{
     grid-template-columns:1fr;
     gap:20px;
+}
+
+.gallery-item{
+    border-radius:20px;
 }
 
 .gallery-item img{
@@ -167,7 +178,7 @@
    SMALL MOBILE
 =========================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
 .gallery{
     padding:60px 15px;

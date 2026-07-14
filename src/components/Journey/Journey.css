@@ -1,306 +1,285 @@
-.journey{
-    background:#f8f4ec;
-    padding:100px 0;
+.journey {
+  background: #EEE6DA;
+  padding: 100px 0;
 }
 
-.journey-container{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:70px;
-    align-items:center;
+.journey-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  align-items: center;
 }
-
 /* ================= IMAGE ================= */
-
-.journey-image{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.journey-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.journey-image img{
-    width:100%;
-    max-width:600px;
-    height:auto;
-    border-radius:25px;
-    display:block;
-    object-fit:cover;
+.journey-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 25px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(62, 74, 69, 0.12);
 }
 
 /* ================= EXPERIENCE ================= */
 
-.experience-card{
-    position:absolute;
-    bottom:20px;
-    left:20px;
-    background:#fff;
-    padding:18px 24px;
-    border-radius:14px;
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-    max-width:200px;
+.experience-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: 1px solid #B9C7B1;
+  box-shadow: 0 15px 35px rgba(62, 74, 69, 0.12);
+  max-width: 200px;
 }
 
-.experience-card h2{
-    font-size:42px;
-    color:#c58a22;
-    line-height:1;
-    margin-bottom:6px;
+.experience-card h2 {
+  font-size: 42px;
+  color: #7A8F78;
+  line-height: 1;
+  margin-bottom: 6px;
 }
 
-.experience-card p{
-    margin:0;
-    color:#444;
-    font-size:18px;
-    line-height:1.4;
+.experience-card p {
+  margin: 0;
+  color: #3E4A45;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 /* ================= CONTENT ================= */
 
-.section-tag{
-    display:inline-block;
-    background:#fff;
-    color:#c58a22;
-    padding:10px 22px;
-    border-radius:30px;
-    font-weight:600;
-    box-shadow:0 8px 20px rgba(0,0,0,.05);
+.section-tag {
+  display: inline-block;
+  background: #ffffff;
+  color: #7A8F78;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 1px solid #B9C7B1;
+  box-shadow: 0 8px 20px rgba(62, 74, 69, 0.06);
 }
 
-.journey-content h2{
-    font-size:52px;
-    margin:25px 0;
-    line-height:1.2;
-    color:#111;
+.journey-content h2 {
+  font-size: 52px;
+  margin: 25px 0;
+  line-height: 1.2;
+  color: #3E4A45;
 }
 
-.journey-content h2 span{
-    color:#c58a22;
+.journey-content h2 span {
+  color: #7A8F78;
 }
 
-.journey-content p{
-    color:#555;
-    line-height:1.8;
-    margin-bottom:35px;
+.journey-content p {
+  color: #5d655f;
+  line-height: 1.9;
+  margin-bottom: 35px;
 }
 
 /* ================= FEATURES ================= */
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.feature-card{
-    display:flex;
-    gap:15px;
-    padding:22px;
-    background:#fff;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.05);
-    transition:.3s;
-    text-align:center;
+.feature-card {
+  display: flex;
+  gap: 15px;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #B9C7B1;
+  box-shadow: 0 10px 25px rgba(62, 74, 69, 0.08);
+  transition: .3s;
+  text-align: center;
 }
 
-.feature-card:hover{
-    transform:translateY(-8px);
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(62, 74, 69, 0.12);
 }
 
-.feature-card svg{
-    color:#c58a22;
-    font-size:28px;
-    flex-shrink:0;
+.feature-card svg {
+  color: #7A8F78;
+  font-size: 28px;
+  flex-shrink: 0;
 }
 
-.feature-card h4{
-    margin-bottom:8px;
-    text-align:center;
+.feature-card h4 {
+  margin-bottom: 8px;
+  color: #3E4A45;
+  text-align: center;
 }
 
-.feature-card p{
-    margin:0;
-    font-size:14px;
-    text-align:center;
+.feature-card p {
+  margin: 0;
+  color: #5d655f;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* ================= BUTTON ================= */
 
-.journey-btn{
-    margin-top:40px;
-    padding:16px 36px;
-    background:#c58a22;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
+.journey-btn {
+  margin-top: 40px;
+  padding: 16px 36px;
+  background: #7A8F78;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 10px 25px rgba(122, 143, 120, 0.25);
 }
 
-.journey-btn:hover{
-    background:#af7718;
+.journey-btn:hover {
+  background: #3E4A45;
+  transform: translateY(-3px);
 }
 
 /* ================= DESKTOP ================= */
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-.journey-image img{
-    max-width:520px;
-}
+  .journey-image img {
+    max-width: 520px;
+  }
 
 }
 
 /* ================= TABLET ================= */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-.journey{
-    padding:80px 20px;
-}
+  .journey {
+    padding: 80px 20px;
+  }
 
-.journey-container{
-    grid-template-columns:1fr;
-    gap:50px;
-}
+  .journey-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 
-.journey-image{
-    justify-content:center;
-}
+  .journey-image {
+    justify-content: center;
+  }
 
-.journey-image img{
-    max-width:500px;
-}
+  .journey-image img {
+    max-width: 500px;
+  }
 
-.journey-content{
-    text-align:center;
-}
-
-.features{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.experience-card{
-    max-width:180px;
-    padding:15px 20px;
-}
-
-.experience-card h2{
-    font-size:34px;
-}
-
-.experience-card p{
-    font-size:15px;
-}
-
-.feature-card{
+  .journey-content {
     text-align: center;
-}
+  }
 
-.journey-content h2{
-    font-size:42px;
-}
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .experience-card {
+    max-width: 180px;
+    padding: 15px 20px;
+  }
+  .experience-card h2 {
+    font-size: 34px;
+  }
+  .experience-card p {
+    font-size: 15px;
+  }
+  .feature-card {
+    text-align: center;
+  }
+  .journey-content h2 {
+    font-size: 42px;
+  }
 }
-
 /* ================= MOBILE ================= */
-
-@media (max-width:768px){
-
-.journey{
-    padding:70px 18px;
-}
-
-.journey-image img{
-    max-width:680px;
-}
-
-.features{
-    grid-template-columns:1fr;
-}
-
-.journey-content{
-    text-align:center;
-}
-
-.journey-content h2{
-    font-size:34px;
-}
-
-.experience-card{
-    max-width:150px;
-    padding:12px 16px;
-    bottom:12px;
-    left:12px;
-}
-
-.experience-card h2{
-    font-size:28px;
-}
-
-.experience-card p{
-    font-size:12px;
-}
-
-.feature-card{
+@media (max-width:768px) {
+  .journey {
+    padding: 70px 18px;
+  }
+  .journey-image img {
+    max-width: 680px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .journey-content {
     text-align: center;
-    padding:18px;
+  }
+  .journey-content h2 {
+    font-size: 34px;
+  }
+  .experience-card {
+    max-width: 150px;
+    padding: 12px 16px;
+    bottom: 12px;
+    left: 12px;
+  }
+  .experience-card h2 {
+    font-size: 28px;
+  }
+  .experience-card p {
+    font-size: 12px;
+  }
+  .feature-card {
+    padding: 18px;
+    text-align: center;
+  }
+  .journey-btn {
+    width: 100%;
+  }
 }
-
-.journey-btn{
-    width:100%;
-}
-
-}
-
 /* ================= SMALL MOBILE ================= */
-
-@media (max-width:480px){
-
-.journey{
-    padding:60px 15px;
-}
-
-.journey-image img{
-    max-width:350px;
-}
-
-.section-tag{
-    font-size:13px;
-    padding:8px 18px;
-}
-
-.journey-content h2{
-    font-size:28px;
-}
-
-.journey-content p{
-    font-size:15px;
-}
-
-.experience-card{
-    max-width:120px;
-    padding:10px 12px;
-    bottom:10px;
-    left:10px;
-}
-
-.experience-card h2{
-    font-size:22px;
-}
-
-.experience-card p{
-    font-size:10px;
-}
-
-.feature-card{
-    padding:16px;
+@media (max-width:480px) {
+  .journey {
+    padding: 60px 15px;
+  }
+  .journey-image img {
+    max-width: 350px;
+  }
+  .section-tag {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+  .journey-content h2 {
+    font-size: 28px;
+  }
+  .journey-content p {
+    font-size: 15px;
+  }
+  .experience-card {
+    max-width: 120px;
+    padding: 10px 12px;
+    bottom: 10px;
+    left: 10px;
+  }
+  .experience-card h2 {
+    font-size: 22px;
+  }
+  .experience-card p {
+    font-size: 10px;
+  }
+  .feature-card {
+    padding: 16px;
     text-align: center;
-}
+  }
 
-.feature-card svg{
-    font-size:22px;
-}
+  .feature-card svg {
+    font-size: 22px;
+  }
 
 }

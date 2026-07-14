@@ -9,8 +9,8 @@ const blogs = [
     readTime: "5 min read",
     image: "/images/self.jpg",
     description:
-      "Self-love is the foundation of a happier and healthier life. Discover the four essential pillars of self-care—physical, emotional, social, and mental—and learn simple daily practices to nurture yourself and create lasting inner well-being. Discover how mindfulness can reduce stress, improve focus, and help you live with greater clarity and peace.",
-          path: "/blog/self-love",
+      "Self-love is the foundation of a happier and healthier life. Discover the four essential pillars of self-care—physical, emotional, social, and mental—and learn simple daily practices to nurture yourself and create lasting inner well-being.",
+    path: "/blog/self-love",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const blogs = [
     readTime: "4 min read",
     image: "/images/balance.webp",
     description:
-      "Achieving a healthy work-life balance isn't about dividing your time equally—it's about creating harmony between your professional responsibilities and personal well-being. Discover practical tips to reduce stress, prevent burnout, and live a more balanced life.",
-    path: "/blog/meditation-emotional-wellbeing",
+      "Achieving a healthy work-life balance isn't about dividing your time equally—it's about creating harmony between your professional responsibilities and personal well-being.",
+    path: "/blog/meditation",
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const blogs = [
     readTime: "6 min read",
     image: "/images/resolutions.webp",
     description:
-      "Success isn't built on resolutions alone—it's built on consistent action. Discover six practical strategies to set meaningful goals, stay motivated, and turn your New Year resolutions into lasting habits throughout the year.",
-    path: "/blog/finding-peace-within-yourself",
+      "Success isn't built on resolutions alone—it's built on consistent action. Learn practical strategies to stay motivated and achieve your goals.",
+    path: "/blog/finding-peace",
   },
 ];
 

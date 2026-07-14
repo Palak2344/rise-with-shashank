@@ -1,8 +1,7 @@
 .programs{
     padding:100px 0;
-    background:#fff;
+    background:#EEE6DA;
 }
-
 /* ===========================
    SECTION HEADER
 =========================== */
@@ -13,9 +12,9 @@
 }
 
 .section-tag{
-    display:inline-block;
-    background:#fdf5ea;
-    color:#c58a22;
+       display:inline-block;
+    background:#B9C7B1;
+    color:#3E4A45;
     padding:10px 22px;
     border-radius:30px;
     font-weight:600;
@@ -24,13 +23,13 @@
 
 .section-title{
     font-size:52px;
-    color:#111;
+     color:#3E4A45;
     line-height:1.2;
     margin-bottom:20px;
 }
 
 .section-title span{
-    color:#c58a22;
+   color:#7A8F78;
 }
 
 .section-description{
@@ -56,18 +55,18 @@
 =========================== */
 
 .program-card{
-    background:#fff;
+    background:#ffffff;
     padding:40px 30px;
     border-radius:20px;
-    border:1px solid #eee;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+   border:1px solid #C9B59A;
+   box-shadow:0 12px 35px rgba(62,74,69,.08);
     transition:.35s;
     text-align:left;
 }
 
 .program-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    box-shadow:0 20px 45px rgba(62,74,69,.15);
 }
 
 /* ===========================
@@ -78,8 +77,8 @@
     width:75px;
     height:75px;
     border-radius:50%;
-    background:#fdf5ea;
-    color:#c58a22;
+   background:#B9C7B1;
+   color:#3E4A45;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -93,12 +92,12 @@
 
 .program-card h3{
     font-size:26px;
-    color:#111;
+     color:#3E4A45;
     margin-bottom:18px;
 }
 
 .program-card p{
-    color:#666;
+     color:#7A8F78;
     line-height:1.8;
     margin-bottom:25px;
 }
@@ -108,8 +107,8 @@
 =========================== */
 
 .program-card button{
-    background:#c58a22;
-    color:#fff;
+    background:#3E4A45;
+    color:white;
     border:none;
     padding:14px 28px;
     border-radius:8px;
@@ -119,7 +118,7 @@
 }
 
 .program-card button:hover{
-    background:#af7718;
+    background:#7A8F78;
 }
 
 /* ===========================
@@ -294,120 +293,66 @@
     border-radius:30px;
     text-align:center;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.08);
+     box-shadow:0 20px 60px rgba(62,74,69,.08);
 
 }
 
 .cta-tag{
-
     display:inline-block;
-
     padding:10px 22px;
-
-    background:#fff4df;
-
-    color:#c58a22;
-
+    background:#B9C7B1;
+    color:#3E4A45;
     border-radius:50px;
-
     font-size:15px;
-
     font-weight:600;
-
     margin-bottom:20px;
-
 }
-
 .program-cta h2{
-
     font-size:70px;
-
-    color:#c58a22;
-
+    color:#3E4A45;
     margin:10px 0;
-
     font-weight:700;
-
 }
-
 .cta-subtitle{
-
-    color:#666;
-
+    color:#7A8F78;
     font-size:18px;
-
     margin-bottom:35px;
-
 }
-
 .cta-features{
-
     list-style:none;
-
     padding:0;
-
     margin:0 0 40px;
-
 }
-
 .cta-features li{
-
     padding:15px 0;
-
-    border-bottom:1px solid #eee;
-
-    color:#444;
-
+    border-bottom:1px solid #C9B59A;
+    color:#3E4A45;
     font-size:17px;
-
 }
 
 .pay-btn{
-
     display:inline-flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:12px;
-
     padding:18px 42px;
-
-    background:#c58a22;
-
-    color:#fff;
-
+    background:#3E4A45;
+    color:white;
     text-decoration:none;
-
     border-radius:50px;
-
     font-size:18px;
-
     font-weight:600;
-
     transition:.35s;
-
 }
-
 .pay-btn:hover{
-
-    background:#af7718;
-
+    background:#7A8F78;
     transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(197,138,34,.35);
-
+    box-shadow:0 12px 30px rgba(122,143,120,.35);
 }
-
 .secure-text{
-
     margin-top:18px;
-
-    color:#888;
-
+    color:#7A8F78;
     font-size:14px;
-
 }
 
 /* Responsive */

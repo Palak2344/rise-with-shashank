@@ -42,17 +42,16 @@ function Navbar() {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/programs">Programs</Link></li>
               <li><Link to="/workshops">Workshops</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
               <li><Link to="/testimonials">Testimonials</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+            
             </ul>
           </nav>
 
           {/* Right Side */}
           <div className="nav-right">
-            <button className="join-btn">
-              Join Community <FaUsers />
-            </button>
 
             <button
               className="menu-btn"
@@ -112,6 +111,13 @@ function Navbar() {
           </li>
 
           <li>
+            <Link to="/blog" onClick={handleLinkClick}>
+              Blog
+            </Link>
+          </li>
+
+
+          <li>
             <Link to="/testimonials" onClick={handleLinkClick}>
               Testimonials
             </Link>
@@ -123,10 +129,6 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-
-        <button className="sidebar-btn">
-          Join Community
-        </button>
       </aside>
     </>
   );

@@ -8,9 +8,10 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(238, 230, 218, 0.95);
   backdrop-filter: blur(15px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #d8d0c5;
+  box-shadow: 0 4px 15px rgba(62, 74, 69, 0.08);
 }
 
 .nav-container {
@@ -39,13 +40,13 @@
 .logo h2 {
   font-size: 15px;
   font-weight: 400;
-  color: #666;
+  color: #7A8F78;
 }
 
 .logo h1 {
   font-size: 28px;
   line-height: 1;
-  color: #222;
+  color: #3E4A45;
 }
 
 /* =========================
@@ -59,97 +60,98 @@
 }
 
 .desktop-nav ul li a {
-  color: #222;
+  color: #3E4A45;
   font-size: 17px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  position: relative;
 }
-
+.desktop-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #7A8F78;
+  transition: .3s;
+}
 .desktop-nav ul li a:hover {
-  color: #c58a22;
+  color: #7A8F78;
 }
-
+.desktop-nav ul li a:hover::after {
+  width: 100%;
+}
 /* =========================
    RIGHT SIDE
 ========================= */
-
 .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 /* =========================
    JOIN BUTTON
 ========================= */
-
 .join-btn {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 14px 26px;
   border: none;
-  border-radius: 8px;
-  background: #c58a22;
+  border-radius: 10px;
+  background: #7A8F78;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
+  box-shadow: 0 10px 25px rgba(122, 143, 120, 0.25);
 }
-
 .join-btn:hover {
-  background: #af7718;
-  transform: translateY(-2px);
+  background: #3E4A45;
+  transform: translateY(-3px);
 }
-
 /* =========================
    MENU BUTTON
 ========================= */
-
 .menu-btn {
   width: 55px;
   height: 55px;
   border: none;
   border-radius: 12px;
-  background: #c58a22;
+  background: #7A8F78;
   color: #fff;
   font-size: 22px;
   cursor: pointer;
   display: none;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
+  transition: .3s;
 }
-
 .menu-btn:hover {
-  background: #af7718;
-  transform: translateY(-2px);
+  background: #3E4A45;
+  transform: translateY(-3px);
 }
-
 /* =========================
    OVERLAY
 ========================= */
-
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(62, 74, 69, 0.45);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: .3s;
   z-index: 999;
 }
-
 .overlay.show {
   opacity: 1;
   visibility: visible;
 }
-
 /* =========================
    SIDEBAR
 ========================= */
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -157,152 +159,126 @@
   width: 320px;
   max-width: 90%;
   height: 100vh;
-  background: #fff;
+  background: #EEE6DA;
   padding: 35px;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.12);
-  transition: 0.35s ease;
+  box-shadow: -10px 0 40px rgba(62, 74, 69, 0.12);
+  transition: .35s ease;
   z-index: 1001;
-
   display: flex;
   flex-direction: column;
+  border-left: 1px solid #C9B59A;
 }
-
 .sidebar.active {
   right: 0;
 }
-
 .sidebar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
-
 .sidebar-top h2 {
   font-size: 30px;
-  color: #222;
+  color: #3E4A45;
 }
-
 .sidebar-top button {
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
+  color: #3E4A45;
+  transition: .3s;
 }
-
+.sidebar-top button:hover {
+  color: #7A8F78;
+}
 .sidebar ul {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
-
 .sidebar ul li a {
   font-size: 19px;
   font-weight: 500;
-  color: #222;
-  transition: 0.3s;
+  color: #3E4A45;
+  transition: .3s;
 }
-
 .sidebar ul li a:hover {
-  color: #c58a22;
+  color: #7A8F78;
+  padding-left: 6px;
 }
-
 .sidebar-btn {
   margin-top: auto;
   padding: 16px;
   border: none;
   border-radius: 10px;
-  background: #c58a22;
+  background: #7A8F78;
   color: #fff;
   font-size: 17px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
-
 .sidebar-btn:hover {
-  background: #af7718;
+  background: #3E4A45;
 }
-
 /* =========================
    TABLET
 ========================= */
-
 @media (max-width: 992px) {
-
   .desktop-nav {
     display: none;
   }
-
   .join-btn {
     display: none;
   }
-
   .menu-btn {
     display: flex;
   }
-
   .nav-container {
     height: 80px;
   }
-
 }
-
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 768px) {
-
   .logo img {
     width: 45px;
     height: 45px;
   }
-
   .logo h2 {
     font-size: 13px;
   }
-
   .logo h1 {
     font-size: 22px;
   }
-
   .menu-btn {
     width: 48px;
     height: 48px;
     font-size: 20px;
   }
-
   .sidebar {
     width: 280px;
     padding: 25px;
   }
-
   .sidebar-top h2 {
     font-size: 24px;
   }
-
   .sidebar ul li a {
     font-size: 18px;
   }
-
 }
-
 /* =========================
    LARGE SCREENS
 ========================= */
-
 @media (min-width: 993px) {
-
   .desktop-nav {
     display: block;
   }
-
   .join-btn {
     display: flex;
   }
-
   .menu-btn {
     display: none;
   }
-
 }

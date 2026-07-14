@@ -1,6 +1,6 @@
 .faq{
     padding:100px 0;
-    background:#fff;
+    background:#EEE6DA;
 }
 
 /* ===========================
@@ -14,29 +14,30 @@
 
 .faq .section-tag{
     display:inline-block;
-    background:#fdf5ea;
-    color:#c58a22;
+    background:#F8F5EF;
+    color:#7A8F78;
     padding:10px 22px;
     border-radius:30px;
     font-weight:600;
     margin-bottom:20px;
+    border:1px solid rgba(122,143,120,.18);
 }
 
 .faq .section-title{
     font-size:52px;
-    color:#111;
+    color:#3E4A45;
     margin-bottom:20px;
     line-height:1.2;
 }
 
 .faq .section-title span{
-    color:#c58a22;
+       color:#7A8F78;
 }
 
 .faq .section-description{
     max-width:760px;
     margin:auto;
-    color:#666;
+    color:#5C645E; 
     font-size:18px;
     line-height:1.8;
 }
@@ -49,20 +50,19 @@
     max-width:900px;
     margin:0 auto;
 }
-
 .faq-item{
-    background:#fff;
-    border:1px solid #eee;
+    background:#F8F5EF;
+    border:1px solid rgba(122,143,120,.18);
     border-radius:18px;
     margin-bottom:20px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    box-shadow:0 8px 20px rgba(62,74,69,.08);
     transition:.3s;
 }
 
 .faq-item:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(62,74,69,.12);
 }
 
 /* ===========================
@@ -81,14 +81,20 @@
     cursor:pointer;
     font-size:19px;
     font-weight:600;
-    color:#111;
+    color:#3E4A45;
     text-align:left;
+    transition:.3s;
+}
+
+.faq-question:hover{
+    color:#2e8b7a;
 }
 
 .faq-question svg{
-    color:#c58a22;
+   color:#7A8F78;
     font-size:18px;
     flex-shrink:0;
+    transition:.3s;
 }
 
 /* ===========================
@@ -100,7 +106,7 @@
 }
 
 .faq-answer p{
-    color:#666;
+    color:#5C645E;
     line-height:1.8;
     font-size:16px;
 }
@@ -110,11 +116,16 @@
 =========================== */
 
 .faq-item.active{
-    border-color:#c58a22;
+    border-color:#7A8F78;
+    box-shadow:0 18px 40px rgba(46,139,122,.18);
 }
 
 .faq-item.active .faq-question{
-    color:#c58a22;
+    color:#7A8F78;
+}
+
+.faq-item.active .faq-question svg{
+    transform:rotate(180deg);
 }
 
 /* ===========================

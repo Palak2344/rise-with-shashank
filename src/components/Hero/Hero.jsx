@@ -1,74 +1,65 @@
 import "./Hero.css";
-import { FaArrowRight, FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaArrowRight, FaPlay, FaSpa } from "react-icons/fa";
 
-function Hero() {
-
-  const scrollToPrograms = () => {
-    const section = document.getElementById("programs");
-
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
-
+export default function Hero() {
   return (
-    <section className="hero">
-
-      <div className="hero-card">
-
-        <img
-          src="/images/hero.jpeg"
-          alt="Rise With Shashank"
-          className="hero-bg"
-        />
-
-        <div className="hero-overlay"></div>
+    <section
+      className="hero"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(62,74,69,.45), rgba(62,74,69,.55)), url('/images/hero.jpeg')",
+      }}
+    >
+      <div className="hero-container">
 
         <div className="hero-content">
 
-          <div className="hero-text">
+          <div className="hero-badge">
+            <FaSpa />
+            <span>RISE WITH SHASHANK</span>
+          </div>
 
-            <span className="hero-badge">
-              Rise with Shashank
-            </span>
+          <h1>
+            Discover Inner Peace
+            <br />
+            Through <span>Meditation</span>
+            <br />
+            & <span>Mindfulness</span>
+          </h1>
 
-            <h1>
-              Discover Inner Peace Through Meditation & Mindfulness
-            </h1>
+          <div className="hero-divider">
+            <span></span>
+            <FaSpa className="divider-icon" />
+            <span></span>
+          </div>
 
-            <p>
-              Break free from stress, self-doubt and emotional pain.
-              Discover clarity, peace and purpose through mindfulness,
-              meditation and inner healing.
-            </p>
+          <p>
+            Break free from stress, self-doubt and emotional pain.
+            Discover clarity, peace and purpose through mindfulness,
+            meditation and inner healing.
+          </p>
 
-            <div className="hero-buttons">
+          <div className="hero-buttons">
 
-              <button
-                className="primary-btn"
-                onClick={scrollToPrograms}
-              >
-                Explore Programs
-                <FaArrowRight />
-              </button>
+            <Link
+              to="/programs"
+              className="hero-btn primary-btn"
+            >
+              Explore Programs
+              <FaArrowRight />
+            </Link>
 
-              <button className="secondary-btn">
-                <FaPlay />
-                Watch Intro
-              </button>
-
-            </div>
+            <button className="hero-btn secondary-btn">
+              <FaPlay />
+              Watch Intro
+            </button>
 
           </div>
 
         </div>
 
       </div>
-
     </section>
   );
 }
-
-export default Hero;
