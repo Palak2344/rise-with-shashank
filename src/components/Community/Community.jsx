@@ -50,9 +50,8 @@ function Community() {
           </a>
           <a
            href="https://www.linkedin.com/in/shashanklalwani/"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="community-card"
+            className="community-card"
+             
 >
   <FaLinkedin />
   <h3>LinkedIn</h3>

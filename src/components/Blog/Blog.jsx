@@ -4,7 +4,7 @@ import "./Blog.css";
 const blogs = [
   {
     id: 1,
-    title: "The Power of Mindfulness",
+    title: "Self Love: The four ways",
     category: "Mindfulness",
     readTime: "5 min read",
     image: "/images/self.jpg",
@@ -14,7 +14,7 @@ const blogs = [
   },
   {
     id: 2,
-    title: "Meditation & Emotional Well-being",
+    title: "Healthy Work Life Balance",
     category: "Meditation",
     readTime: "4 min read",
     image: "/images/balance.webp",
@@ -24,7 +24,7 @@ const blogs = [
   },
   {
     id: 3,
-    title: "Finding Peace Within Yourself",
+    title: "New Year Resolutions", 
     category: "Self Growth",
     readTime: "6 min read",
     image: "/images/resolutions.webp",

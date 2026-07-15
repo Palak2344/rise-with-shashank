@@ -11,28 +11,41 @@ export default function BlogOne() {
     backgroundImage: "url('/images/self.jpg')",
   }}
 >
-        <div className="overlay">
+  <div className="overlay">
 
-          <span className="category">
-            Self Love
-          </span>
+    <span className="category">
+      Self Love
+    </span>
 
-          <h1>Self Love: The Four Ways</h1>
+    <h1>Self Love: The Four Ways</h1>
 
-          <div className="meta">
-            <span>Published by Shashank Lalwani</span>
-            <span>Dec 27, 2022</span>
-            <span>5 min read</span>
-          </div>
+    <div className="meta">
+      <span>Published by Shashank Lalwani</span>
+      <span>Dec 27, 2022</span>
+      <span>5 min read</span>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
+
+{/* Headline Section */}
+<section className="blog-headline">
+  <div className="blog-container">
+     <h1>Self Love: The Four Ways</h1> <br>
+     </br>
+    
+  </div>
+</section>
 
       {/* ARTICLE */}
 
       <div className="blog-container">
 
         <p className="intro">
+          Discover the four essential pillars of self-love that help you build
+      a healthier body, a calmer mind, stronger relationships, and a happier life.</p>
+      <p/>
+      <p>
           Self Love has been the most important part of everyone's life and yet
           ignored largely.
         </p>

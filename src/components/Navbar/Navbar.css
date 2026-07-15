@@ -28,12 +28,12 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1px;
 }
 
 .logo img {
-  width: 55px;
-  height: 55px;
+  width: 185px;
+  height: 185px;
   object-fit: contain;
 }
 
@@ -243,8 +243,8 @@
 ========================= */
 @media (max-width: 768px) {
   .logo img {
-    width: 45px;
-    height: 45px;
+    width: 85px;
+   height: 85px;
   }
   .logo h2 {
     font-size: 13px;
@@ -281,4 +281,4 @@
   .menu-btn {
     display: none;
   }
-}
+}   

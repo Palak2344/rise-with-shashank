@@ -20,11 +20,7 @@ function About() {
         {/* Section Title */}
 
         <div className="section-title">
-          <span>ABOUT SHASHANK</span>
-
-          <h2>
-            We Shall Make You Fall in Love With Yourself
-          </h2>
+          <span>ABOUT SHASHANK LALWANI</span>
         </div>
 
         <div className="about-wrapper">
@@ -48,8 +44,9 @@ function About() {
           {/* RIGHT CONTENT */}
 
           <div className="about-content">
-
-            <h3>About Shashank Lalwani</h3>
+               <h3>
+            We Shall Make You Fall in Love With Yourself
+          </h3>
 
             <p>
               For over <strong>15 years</strong>, Shashank Lalwani has

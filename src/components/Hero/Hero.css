@@ -21,20 +21,22 @@
     gap:10px;
     padding:12px 24px;
     border-radius:50px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(10px);
+    background:rgba(62,74,69,.25);
+    backdrop-filter:blur(12px);
     color:#fff;
     font-weight:600;
-    margin-bottom:25px;
+    border:1px solid rgba(201,181,154,.5);
 }
 .hero h1{
     font-size:72px;
     line-height:1.1;
-    color:hsl(0, 0%, 2%);
+    color:#fff;
     margin-bottom:25px;
+    text-shadow:0 3px 12px rgba(0,0,0,.35);
 }
+
 .hero h1 span{
-    color:#B9C7B1;
+    color:#100900b2;
 }
 .hero-divider{
     display:flex;
@@ -47,13 +49,14 @@
     height:2px;
     background:#C9B59A;
 }
+
 .divider-icon{
-    color:#B9C7B1;
+    color:#C9B59A;
 }
 .hero p{
     font-size:20px;
     line-height:1.9;
-    color:#F5F5F5;
+    color:rgba(255,255,255,.92);
     max-width:620px;
 }
 .hero-buttons{
@@ -70,7 +73,7 @@
     border-radius:50px;
     text-decoration:none;
     font-weight:600;
-    transition:.35s;
+    transition:all .35s ease;
 }
 .primary-btn{
     background:#7A8F78;
@@ -78,16 +81,24 @@
 }
 .primary-btn:hover{
     background:#3E4A45;
+    border-color:#C9B59A;
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(62,74,69,.25);
 }
+
 .secondary-btn{
-    background:rgba(255,255,255,.18);
-    border:2px solid rgba(255,255,255,.5);
+    background:rgba(255,255,255,.15);
+    border:2px solid #C9B59A;
     color:#fff;
     cursor:pointer;
-}
+    backdrop-filter:blur(10px);
+} 
+
 .secondary-btn:hover{
-    background:#fff;
-    color:#3E4A45;
+   background:#3E4A45;
+    border-color:#C9B59A;
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(201,181,154,.35);
 }
 /* ===========================
    TABLET
