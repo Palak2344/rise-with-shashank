@@ -1,434 +1,133 @@
-.books{
-    padding:100px 0;
-    background:#EEE6DA;
+.book-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+  padding: 60px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
-.books-header{
-    text-align:center;
-    margin-bottom:70px;
+.book-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  perspective: 1100px;
 }
 
-.section-tag{
-    display:inline-block;
-    background:#ffffff;
-    color:#7A8F78;
-    padding:10px 22px;
-    border-radius:30px;
-    font-weight:600;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(62,74,69,.08);
+.book-halo {
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold-soft) 0%, transparent 70%);
+  animation: halo 6s ease-in-out infinite;
 }
 
-.section-title{
-    font-size:52px;
-    color:#3E4A45;
-    line-height:1.2;
-    margin-bottom:20px;
+@keyframes halo {
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
 }
 
-.section-title span{
-    color:#7A8F78;
+.book-3d {
+  position: relative;
+  width: min(320px, 100%);
+  transform-style: preserve-3d;
+  border-radius: 6px 14px 14px 6px;
+  box-shadow: -18px 30px 50px -10px rgba(0, 0, 0, 0.45),
+    inset 6px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.section-description{
-    max-width:760px;
-    margin:0 auto;
-    color:#5f6b66;
-    line-height:1.8;
-    font-size:18px;
+.book-3d img {
+  width: 100%;
+  border-radius: 6px 14px 14px 6px;
 }
 
-/* ===========================
-   BOOK CARD
-=========================== */
-
-.book-card{
-    display:grid;
-    grid-template-columns:420px 1fr;
-    gap:70px;
-    align-items:center;
-
-    background:#ffffff;
-
-    padding:60px;
-
-    border-radius:30px;
-
-    border:1px solid #C9B59A;
-
-    box-shadow:0 18px 40px rgba(62,74,69,.08);
+/* spine highlight + gloss */
+.book-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(255, 255, 255, 0.25) 3%,
+      transparent 7%
+    ),
+    linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.18) 50%, transparent 60%);
+  pointer-events: none;
 }
 
-/* ===========================
-   BOOK IMAGE
-=========================== */
-
-.book-image{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.book-tag {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
-.book-image img{
-    width:100%;
-    max-width:320px;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 45px rgba(62,74,69,.18);
-
-    transition:.4s;
+.book-content h3 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 16px;
 }
 
-.book-image img:hover{
-    transform:translateY(-8px) scale(1.03);
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0 36px;
 }
 
-/* ===========================
-   CONTENT
-=========================== */
-
-.book-content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+.book-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
-.book-tag{
-    display:inline-block;
-    width:fit-content;
-
-    background:#7A8F78;
-
-    color:#ffffff;
-
-    padding:8px 18px;
-
-    border-radius:25px;
-
-    font-size:14px;
-
-    margin-bottom:20px;
-
-    font-weight:600;
+.book-list .check {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
-.book-content h3{
-    font-size:42px;
-    color:#3E4A45;
-    margin-bottom:20px;
+.book-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.book-content p{
-    color:#5f6b66;
-    line-height:1.9;
-    font-size:17px;
-    margin-bottom:30px;
+@media (max-width: 1024px) {
+  .book-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 44px 36px;
+  }
 }
 
-.book-content ul{
-    list-style:none;
-    padding:0;
-    margin:0 0 35px;
-}
-
-.book-content ul li{
-    margin-bottom:15px;
-    color:#3E4A45;
-    font-size:17px;
-    display:flex;
-    align-items:center;
-}
-
-/* ===========================
-   BUTTON
-=========================== */
-
-.buy-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
-    width:fit-content;
-
-    padding:18px 35px;
-
-    background:linear-gradient(135deg,#7A8F78,#3E4A45);
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    border-radius:12px;
-
-    font-size:17px;
-    font-weight:600;
-
-    transition:.35s;
-
-    box-shadow:0 12px 30px rgba(62,74,69,.25);
-}
-
-.buy-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 18px 35px rgba(62,74,69,.35);
-}
-
-.buy-btn svg{
-    font-size:24px;
-}
-
-.buy-btn span{
-    color:#ffffff;
-}
-
-/* ===========================
-   LAPTOP
-=========================== */
-
-@media(max-width:1200px){
-
-.book-card{
-    grid-template-columns:360px 1fr;
-    gap:50px;
-    padding:50px;
-}
-
-.book-image img{
-    max-width:280px;
-}
-
-.book-content h3{
-    font-size:36px;
-}
-
-}
-
-/* ===========================
-   TABLET
-=========================== */
-
-@media(max-width:992px){
-
-.books{
-    padding:80px 20px;
-}
-
-.book-card{
-    grid-template-columns:1fr;
-    gap:40px;
-    text-align:center;
-    padding:45px;
-}
-
-.book-image img{
-    max-width:260px;
-}
-
-.book-tag{
-    margin:0 auto 20px;
-}
-
-.book-content h3{
-    font-size:34px;
-}
-
-.book-content ul{
-    display:inline-block;
-    text-align:left;
-}
-
-.buy-btn{
-    margin:auto;
-}
-
-.section-title{
-    font-size:40px;
-}
-
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:768px){
-
-.books{
-    padding:70px 18px;
-}
-
-.book-card{
-    padding:35px 25px;
-}
-
-.book-image img{
-    max-width:220px;
-}
-
-.book-content h3{
-    font-size:28px;
-}
-
-.book-content p{
-    font-size:16px;
-}
-
-.book-content ul li{
-    font-size:15px;
-}
-
-.buy-btn{
-    width:100%;
-    justify-content:center;
-}
-
-}
-
-/* ===========================
-   SMALL MOBILE
-=========================== */
-
-@media(max-width:480px){
-
-.books{
-    padding:60px 15px;
-}
-
-.section-tag{
-    font-size:13px;
-    padding:8px 18px;
-}
-
-.section-title{
-    font-size:28px;
-}
-
-.section-description{
-    font-size:15px;
-}
-
-.book-card{
-    padding:25px 20px;
-    border-radius:20px;
-}
-
-.book-image img{
-    max-width:180px;
-}
-
-.book-content h3{
-    font-size:24px;
-}
-
-.book-content p{
-    font-size:15px;
-}
-
-.book-content ul li{
-    font-size:14px;
-}
-
-.buy-btn{
-    width:100%;
-    padding:15px;
-    font-size:15px;
-}
-
-.buy-btn svg{
-    font-size:20px;
-}
-
-}
-/* ===============================
-   BOOK BUTTONS
-================================= */
-
-.book-buttons{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    margin-top:30px;
-}
-
-/* Amazon Button */
-
-.buy-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    padding:15px 30px;
-    border-radius:50px;
-
-    background:#7A8F78;
-    color:#fff;
-    text-decoration:none;
-
-    font-size:16px;
-    font-weight:600;
-
-    transition:.35s ease;
-}
-
-.buy-btn:hover{
-    background:#3E4A45;
-    transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(0,0,0,.15);
-}
-
-/* Audible Button */
-
-.audible-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    padding:15px 30px;
-    border-radius:50px;
-
-    background:#C9B59A;
-    color:#fff;
-    text-decoration:none;
-
-    font-size:16px;
-    font-weight:600;
-
-    transition:.35s ease;
-}
-
-.audible-btn:hover{
-    background:#7A8F78;
-    transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(0,0,0,.15);
-}
-
-.buy-btn svg,
-.audible-btn svg{
-    font-size:20px;
-}
-
-/* Tablet */
-
-@media (max-width:768px){
-
-.book-buttons{
-    flex-direction:column;
-    width:100%;
-}
-
-.buy-btn,
-.audible-btn{
-    width:100%;
-}
-
+@media (max-width: 640px) {
+  .book-card {
+    padding: 30px 20px;
+  }
+  .book-3d {
+    width: 230px;
+  }
+  .book-buttons .btn {
+    width: 100%;
+  }
 }

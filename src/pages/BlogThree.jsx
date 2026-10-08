@@ -1,33 +1,15 @@
+import BlogHero from "./BlogHero";
 import "./BlogDetails.css";
 
 export default function BlogThree() {
   return (
-    <div className="blog-details">
-
-      {/* HERO */}
-<section
-  className="blog-hero"
-  style={{
-    backgroundImage: "url('/images/resolutions.webp')",
-  }}
-></section>
-
-<div className="blog-header">
-
-  <span className="category">
-    Personal Growth
-  </span>
-
-  <h1>New Year Resolutions and How to Nail It</h1>
-
-  <div className="meta">
-    <span>Published by Shashank Lalwani</span>
-    <span>Jan 09, 2022</span>
-    <span>6 min read</span>
-  </div>
-
-</div>
-      {/* ARTICLE */}
+    <article className="blog-details">
+      <BlogHero
+        image="/images/resolutions.webp"
+        category="Personal Growth"
+        title="New Year Resolutions and How to Nail It"
+        meta={["Published by Shashank Lalwani", "Jan 09, 2022", "6 min read"]}
+      />
 
       <div className="blog-container">
 
@@ -187,7 +169,7 @@ export default function BlogThree() {
           href="https://pages.razorpay.com/heal1"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn"
+          className="btn btn-primary"
         >
           Book a Session
         </a>
@@ -204,6 +186,6 @@ export default function BlogThree() {
 
       </div>
 
-    </div>
+    </article>
   );
 }

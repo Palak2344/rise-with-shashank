@@ -1,7 +1,11 @@
-import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
+import Marquee from "../components/Marquee/Marquee";
 import About from "../components/About/About";
 import Journey from "../components/Journey/Journey";
+import Method from "../components/Method/Method";
+import Retreat from "../components/Retreat/Retreat";
+import Corporate from "../components/Corporate/Corporate";
+import Impact from "../components/Impact/Impact";
 import WhyChoose from "../components/WhyChoose/WhyChoose";
 import Programs from "../components/Programs/Programs";
 import Workshop from "../components/Workshop/Workshop";
@@ -16,13 +20,17 @@ import Contact from "../components/Contact/Contact";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
+      <Marquee />
       <About />
       <Journey />
+      <Method />
       <WhyChoose />
       <Programs />
       <Workshop />
+      <Retreat />
+      <Corporate />
+      <Impact />
       <Testimonials />
       <Gallery />
       <Book />
@@ -30,7 +38,6 @@ export default function Home() {
       <Community />
       <FAQ />
       <Contact />
-  
     </>
   );
 }

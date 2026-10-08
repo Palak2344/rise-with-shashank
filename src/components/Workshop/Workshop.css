@@ -1,324 +1,310 @@
-.workshop {
-  padding: 100px 0;
-  background: #EEE6DA;
-}
-/* ===========================
-   HEADER
-=========================== */
-.workshop-header {
-  text-align: center;
-  margin-bottom: 70px;
-}
-.section-tag {
+.day-chip {
   display: inline-block;
-  background: #ffffff;
-  color: #7A8F78;
-  padding: 10px 22px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  border: 1px solid #B9C7B1;
-  box-shadow: 0 8px 20px rgba(62, 74, 69, 0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
-.section-title {
+
+.sub-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   text-align: center;
-  font-size: 52px;
-  color: #3E4A45;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  margin: 90px 0 40px;
 }
-.section-description {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-  color: #6b746d;
-  line-height: 1.8;
-  font-size: 18px;
-}
-/* ===========================
-   INTRO CARD
-=========================== */
+
+/* =========================
+   DAY 0
+========================= */
+
 .intro-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 45px;
-  box-shadow: 0 15px 35px rgba(62, 74, 69, 0.08);
-  margin-bottom: 70px;
-  text-align: left;
-  border: 1px solid #B9C7B1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
-.intro-card h3 {
-  font-size: 34px;
-  color: #3E4A45;
-  margin-bottom: 20px;
+
+.intro-left h3 {
+  font-size: 2.4rem;
+  margin: 16px 0 10px;
 }
-.intro-card > p {
+
+.intro-time {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 25px;
-  color: #6b746d;
+  font-size: 15px;
+  font-weight: 600;
 }
-.intro-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 25px 0;
+
+.intro-time svg {
+  color: var(--accent);
 }
-.intro-card li {
+
+.takeaway {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  background: var(--surface-2);
+}
+
+.takeaway strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.intro-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-content: center;
+}
+
+.intro-points li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-  color: #3E4A45;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: transform 0.4s var(--ease), border-color 0.4s;
 }
 
-.intro-card svg {
-  color: #7A8F78;
+.intro-points li:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
 }
 
-.intro-card strong {
-  display: block;
-  margin-bottom: 10px;
-  color: #3E4A45;
+.intro-points svg {
+  color: var(--accent);
+  flex-shrink: 0;
 }
-/* ===========================
+
+/* =========================
    TIMELINE
-=========================== */
-.timeline-title {
-  text-align: center;
-  font-size: 40px;
-  color: #3E4A45;
-  margin-bottom: 40px;
-}
+========================= */
+
 .timeline {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 9px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 2px;
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+}
+
+.timeline-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 80px;
+  gap: 24px;
 }
+
 .time-card {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 20px;
+  position: relative;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(62, 74, 69, 0.08);
-  transition: .3s;
-  border: 1px solid #B9C7B1;
+  padding-top: 44px;
 }
-.time-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(62, 74, 69, 0.12);
+
+.time-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 6px var(--gold-soft);
 }
+
+.time {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
 .time-card h4 {
-  color: #7A8F78;
-  font-size: 24px;
-  margin-bottom: 15px;
+  font-size: 17px;
+  margin-bottom: 8px;
 }
+
 .time-card p {
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #3E4A45;
+  font-size: 14.5px;
+  max-width: 300px;
+  margin-inline: auto;
 }
-.time-card span {
-  color: #6b746d;
-  line-height: 1.7;
-}
-/* ===========================
-   DAILY THEMES
-=========================== */
+
+/* =========================
+   DAY THEMES
+========================= */
+
 .day-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
+
 .day-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 12px 30px rgba(62, 74, 69, 0.08);
-  transition: .3s;
-  text-align: left;
-  border: 1px solid #B9C7B1;
+  position: relative;
+  padding: 28px 22px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s, border-color 0.5s;
 }
+
+.day-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease);
+}
+
 .day-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(62, 74, 69, 0.12);
+  box-shadow: var(--shadow-lg);
 }
-.day-card span {
-  display: inline-block;
-  background: #B9C7B1;
-  color: #3E4A45;
-  padding: 8px 18px;
-  border-radius: 25px;
-  font-weight: 600;
-  margin-bottom: 18px;
+
+.day-card:hover::after {
+  transform: scaleX(1);
 }
+
 .day-card h3 {
-  font-size: 28px;
-  color: #3E4A45;
-  margin-bottom: 18px;
+  font-size: 1.7rem;
+  margin: 16px 0 14px;
 }
-.day-card p {
-  color: #6b746d;
-  line-height: 1.8;
-  margin-bottom: 14px;
+
+.day-card dt {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 12px;
 }
-.day-card strong {
-  color: #3E4A45;
+
+.day-card dd {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
 }
-/* ===========================
+
+/* =========================
    BONUS
-=========================== */
+========================= */
+
 .bonus-card {
-  margin-top: 80px;
-  background: linear-gradient(135deg, #7A8F78, #3E4A45);
-  color: #ffffff;
-  border-radius: 25px;
-  padding: 50px;
-  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 44px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--gold-soft), var(--accent-soft));
+  border: 1px dashed var(--gold);
 }
-.bonus-card svg {
-  font-size: 60px;
-  margin-bottom: 20px;
+
+.bonus-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 22px;
+  font-size: 30px;
+  color: #1f1a10;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  box-shadow: 0 14px 30px -12px var(--gold);
 }
+
+.bonus-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 .bonus-card h3 {
-  font-size: 34px; 
-  color: #c8d2c2;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin: 4px 0 8px;
 }
-.bonus-card p {
-  color: #f5f5f5;
-  line-height: 1.8;
-  font-size: 17px;
+
+.bonus-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
 }
-/* ===========================
-   LAPTOP
-=========================== */
-@media (max-width:1200px) {
-  .section-title {
-    font-size: 46px;
-  }
-  .timeline {
-    gap: 25px;
-  }
+
+@media (max-width: 1180px) {
   .day-grid {
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-/* ===========================
-   TABLET
-=========================== */
-@media (max-width:992px) {
-  .workshop {
-    padding: 80px 20px;
-  }
-  .section-title {
-    font-size: 40px;
-  }
-  .timeline {
+
+@media (max-width: 900px) {
+  .intro-card {
     grid-template-columns: 1fr;
+    padding: 36px 28px;
+    gap: 32px;
+  }
+  .timeline-line {
+    display: none;
+  }
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
   .day-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .intro-card {
-    text-align: center;
-  }
-  .intro-card > p {
-    justify-content: center;
-  }
-  .intro-card li {
-    justify-content: center;
-  }
-  .day-card {
-    text-align: center;
-  }
-  .day-card span {
-    margin: 0 auto 18px;
-  }
 }
-/* ===========================
-   MOBILE
-=========================== */
-@media (max-width:768px) {
-  .workshop {
-    padding: 70px 18px;
-  }
-  .section-title {
-    font-size: 32px;
-  }
-  .section-description {
-    font-size: 16px;
-  }
-  .timeline-title {
-    font-size: 30px;
-  }
+
+@media (max-width: 640px) {
+  .intro-points,
   .day-grid {
     grid-template-columns: 1fr;
   }
-  .intro-card,
-  .time-card,
-  .day-card {
-    padding: 28px;
-  }
-  .intro-card h3 {
-    font-size: 26px;
-  }
-  .day-card h3 {
-    font-size: 24px;
+  .sub-title {
+    margin: 64px 0 32px;
   }
   .bonus-card {
-    padding: 35px 25px;
-  }
-  .bonus-card h3 {
-    font-size: 26px;
-  }
-  .bonus-card svg {
-    font-size: 48px;
-  }
-}
-/* ===========================
-   SMALL MOBILE
-=========================== */
-@media (max-width:480px) {
-  .workshop {
-    padding: 60px 15px;
-  }
-  .section-tag {
-    font-size: 13px;
-    padding: 8px 18px;
-  }
-  .section-title {
-    font-size: 28px;
-  }
-  .section-description {
-    font-size: 15px;
-  }
-  .timeline-title {
-    font-size: 24px;
-  }
-  .intro-card,
-  .time-card,
-  .day-card {
-    padding: 22px;
-  }
-  .intro-card h3 {
-    font-size: 22px;
-  }
-  .day-card h3 {
-    font-size: 22px;
-  }
-  .day-card p {
-    font-size: 14px;
-  }
-  .bonus-card {
-    padding: 28px 20px;
-  }
-  .bonus-card h3 {
-    font-size: 22px;
-  }
-  .bonus-card p {
-    font-size: 15px;
+    flex-direction: column;
+    padding: 30px 24px;
   }
 }

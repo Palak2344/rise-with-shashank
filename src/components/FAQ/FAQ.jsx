@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaPlus } from "react-icons/fa";
+
+import SectionHead from "../ui/SectionHead";
+import { Stagger, StaggerItem } from "../ui/Motion";
 import "./FAQ.css";
 
 const faqs = [
@@ -25,8 +29,22 @@ const faqs = [
   },
   {
     question: "Is there any age limit?",
+    answer: "Anyone aged 15 years and above can join the workshop.",
+  },
+  {
+    question: "Do you offer 1:1 coaching?",
     answer:
-      "Anyone aged 15 years and above can join the workshop.",
+      "Yes. Private coaching follows a four-phase journey — Discover, Reset, Embody and Sustain — tailored to your schedule and goals.",
+  },
+  {
+    question: "How many people join the Weekend Retreat?",
+    answer:
+      "Each retreat is limited to 12 participants so everyone receives real depth and personal attention.",
+  },
+  {
+    question: "Can you run wellness programs for my company?",
+    answer:
+      "Yes. Options range from half-day burnout recovery workshops (online or offline) to team retreats, executive 1:1 coaching and monthly wellness retainers.",
   },
   {
     question: "What do I need for the sessions?",
@@ -44,42 +62,51 @@ function FAQ() {
 
   return (
     <section className="faq" id="faq">
-      <div className="container">
-        <div className="faq-header">
-          <span className="section-tag">FAQs</span>
+      <div className="container faq-layout">
+        <SectionHead align="left" eyebrow="FAQs" title="Frequently Asked" highlight="Questions">
+          Find answers to the most common questions about our meditation and
+          lifestyle workshops.
+        </SectionHead>
 
-          <h2 className="section-title">
-            Frequently Asked <span>Questions</span>
-          </h2>
+        <Stagger className="faq-list" stagger={0.07}>
+          {faqs.map((item, index) => {
+            const open = active === index;
+            return (
+              <StaggerItem className={`faq-item ${open ? "active" : ""}`} key={item.question}>
+                <button
+                  type="button"
+                  className="faq-question"
+                  onClick={() => toggle(index)}
+                  aria-expanded={open}
+                >
+                  <span className="faq-num">0{index + 1}</span>
+                  <span className="faq-text">{item.question}</span>
+                  <motion.span
+                    className="faq-icon"
+                    animate={{ rotate: open ? 45 : 0 }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <FaPlus />
+                  </motion.span>
+                </button>
 
-          <p className="section-description">
-            Find answers to the most common questions about our meditation and
-            lifestyle workshops.
-          </p>
-        </div>
-
-        <div className="faq-list">
-          {faqs.map((item, index) => (
-            <div
-              className={`faq-item ${active === index ? "active" : ""}`}
-              key={index}
-            >
-              <button
-                className="faq-question"
-                onClick={() => toggle(index)}
-              >
-                <span>{item.question}</span>
-                {active === index ? <FaMinus /> : <FaPlus />}
-              </button>
-
-              {active === index && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+                <AnimatePresence initial={false}>
+                  {open && (
+                    <motion.div
+                      className="faq-answer"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      <p>{item.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </StaggerItem>
+            );
+          })}
+        </Stagger>
       </div>
     </section>
   );

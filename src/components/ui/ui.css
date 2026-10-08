@@ -1,0 +1,180 @@
+/* =========================
+   BRAND / LOGO
+========================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #8d8169;
+  box-shadow: 0 0 0 1.5px var(--gold-soft), 0 6px 18px -6px var(--gold);
+  transition: transform 0.6s var(--ease);
+}
+
+/* the emblem sits in a ~600px square centred at (775, 410) of the 1536×1024 source */
+.brand-mark img {
+  position: absolute;
+  width: 256%;
+  max-width: none;
+  left: -79%;
+  top: -18%;
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(-12deg) scale(1.06);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-text small {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.brand-text strong {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  overflow: hidden;
+  transition: border-color 0.3s, color 0.3s, transform 0.3s var(--ease);
+}
+
+.theme-toggle:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  transform: rotate(12deg);
+}
+
+.theme-toggle-icon {
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+}
+
+/* =========================
+   SCROLL PROGRESS & BACK TO TOP
+========================= */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1100;
+  transform-origin: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--gold-bright));
+}
+
+.whatsapp-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 901;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  z-index: -1;
+  animation: pulse 2.4s ease-out infinite;
+}
+
+.whatsapp-tip {
+  position: absolute;
+  right: calc(100% + 12px);
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.4s var(--ease);
+}
+
+.whatsapp-fab:hover .whatsapp-tip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 92px;
+  z-index: 900;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  color: var(--on-accent);
+  background: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 640px) {
+  .whatsapp-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+  }
+  .back-to-top {
+    right: 20px;
+    bottom: 80px;
+    width: 44px;
+    height: 44px;
+  }
+}

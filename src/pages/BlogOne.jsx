@@ -1,41 +1,15 @@
+import BlogHero from "./BlogHero";
 import "./BlogDetails.css";
 
 export default function BlogOne() {
   return (
-    <div className="blog-details">
-
-      {/* HERO */}
-   <section
-  className="blog-hero"
-  style={{
-    backgroundImage: "url('/images/self.jpg')",
-  }}
->
-  <div className="overlay">
-
-    <span className="category">
-      Self Love
-    </span>
-
-    <h1>Self Love: The Four Ways</h1>
-
-    <div className="meta">
-      <span>Published by Shashank Lalwani</span>
-      <span>Dec 27, 2022</span>
-      <span>5 min read</span>
-    </div>
-
-  </div>
-</section>
-
-{/* Headline Section */}
-<section className="blog-headline">
-  <div className="blog-container">
-     <h1>Self Love: The Four Ways</h1> <br>
-     </br>
-    
-  </div>
-</section>
+    <article className="blog-details">
+      <BlogHero
+        image="/images/self.jpg"
+        category="Self Love"
+        title="Self Love: The Four Ways"
+        meta={["Published by Shashank Lalwani", "Dec 27, 2022", "5 min read"]}
+      />
 
       {/* ARTICLE */}
 
@@ -44,7 +18,6 @@ export default function BlogOne() {
         <p className="intro">
           Discover the four essential pillars of self-love that help you build
       a healthier body, a calmer mind, stronger relationships, and a happier life.</p>
-      <p/>
       <p>
           Self Love has been the most important part of everyone's life and yet
           ignored largely.
@@ -186,7 +159,7 @@ export default function BlogOne() {
           href="https://www.fitmind.in"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn"
+          className="btn btn-primary"
         >
           Visit FitMind
         </a>
@@ -203,6 +176,6 @@ export default function BlogOne() {
 
       </div>
 
-    </div>
+    </article>
   );
 }

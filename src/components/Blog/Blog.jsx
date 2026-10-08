@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { FaArrowRight, FaClock } from "react-icons/fa";
+
+import SectionHead from "../ui/SectionHead";
+import { Stagger, StaggerItem } from "../ui/Motion";
 import "./Blog.css";
 
 const blogs = [
@@ -24,7 +28,7 @@ const blogs = [
   },
   {
     id: 3,
-    title: "New Year Resolutions", 
+    title: "New Year Resolutions",
     category: "Self Growth",
     readTime: "6 min read",
     image: "/images/resolutions.webp",
@@ -38,55 +42,35 @@ const Blog = () => {
   return (
     <section className="blog-section" id="blog">
       <div className="container">
+        <SectionHead eyebrow="Latest Articles" title="Insights on Mindfulness, Meditation &" highlight="Personal Growth">
+          Read articles written by Shashank Lalwani to inspire self-awareness,
+          mindfulness, and personal transformation.
+        </SectionHead>
 
-        <div className="section-header">
-          <span>Latest Articles</span>
-
-          <h2>
-            Insights on Mindfulness,
-            <br />
-            Meditation & Personal Growth
-          </h2>
-
-          <p>
-            Read articles written by Shashank Lalwani to inspire
-            self-awareness, mindfulness, and personal transformation.
-          </p>
-        </div>
-
-        <div className="blog-grid">
+        <Stagger className="blog-grid" stagger={0.15}>
           {blogs.map((blog) => (
-            <div className="blog-card" key={blog.id}>
-
-              <div className="blog-image">
-                <img src={blog.image} alt={blog.title} />
-              </div>
-
-              <div className="blog-body">
-
-                <span className="blog-category">
-                  {blog.category}
-                </span>
-
-                <h3>{blog.title}</h3>
-
-                <p>{blog.description}</p>
-
-                <div className="blog-footer">
-
-                  <span>{blog.readTime}</span>
-
-                 <Link to={blog.path}>
-  Read Full Article →
-</Link> 
+            <StaggerItem key={blog.id}>
+              <Link to={blog.path} className="blog-card">
+                <div className="blog-image">
+                  <img src={blog.image} alt={blog.title} loading="lazy" />
+                  <span className="blog-category">{blog.category}</span>
                 </div>
 
-              </div>
+                <div className="blog-body">
+                  <span className="blog-time">
+                    <FaClock /> {blog.readTime}
+                  </span>
+                  <h3>{blog.title}</h3>
+                  <p>{blog.description}</p>
 
-            </div>
+                  <span className="blog-link">
+                    Read Full Article <FaArrowRight />
+                  </span>
+                </div>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
-
+        </Stagger>
       </div>
     </section>
   );

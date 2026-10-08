@@ -1,90 +1,40 @@
+import { FaCheckCircle, FaAward, FaHeart, FaUsers, FaLeaf, FaSmile } from "react-icons/fa";
+
+import SectionHead from "../ui/SectionHead";
+import { Stagger, StaggerItem } from "../ui/Motion";
 import "./WhyChoose.css";
-import {
-  FaCheckCircle,
-  FaAward,
-  FaHeart,
-  FaUsers,
-  FaLeaf,
-  FaSmile,
-} from "react-icons/fa";
+
+const reasons = [
+  { icon: <FaAward />, title: "Certified Coach", text: "Professional meditation & life coach." },
+  { icon: <FaUsers />, title: "500+ Participants", text: "Across India & the UAE." },
+  { icon: <FaHeart />, title: "Emotional Healing", text: "Heal anxiety and emotional pain." },
+  { icon: <FaLeaf />, title: "Mindfulness", text: "Create peace in everyday life." },
+  { icon: <FaSmile />, title: "Positive Lifestyle", text: "Build healthy habits for success." },
+  { icon: <FaCheckCircle />, title: "Lifetime Community", text: "Support beyond every session." },
+];
 
 function WhyChoose() {
   return (
     <section className="why" id="why">
+      <div className="why-glow" aria-hidden="true" />
+
       <div className="container">
+        <SectionHead eyebrow="Why Choose Us" title="Transform Your Life With" highlight="Expert Guidance">
+          Every journey is unique. At Rise with Shashank, we provide
+          personalized meditation, emotional healing, and life coaching that
+          empowers you to live with confidence, clarity, and inner peace.
+        </SectionHead>
 
-        <div className="why-content">
-
-          <span className="section-tag">
-            Why Choose Us
-          </span>
-
-          <h2>
-            Transform Your Life With
-            <span> Expert Guidance</span>
-          </h2>
-
-          <p>
-            Every journey is unique. At Rise with Shashank, we provide
-            personalized meditation, emotional healing, and life coaching
-            that empowers you to live with confidence, clarity, and inner
-            peace.
-          </p>
-
-          <div className="why-grid">
-
-            <div className="why-card">
-              <FaAward />
-              <div>
-                <h4>Certified Coach</h4>
-                <p>Professional meditation & life coach.</p>
-              </div>
-            </div>
-
-            <div className="why-card">
-              <FaUsers />
-              <div>
-                <h4>5000+ Students</h4>
-                <p>Lives transformed worldwide.</p>
-              </div>
-            </div>
-
-            <div className="why-card">
-              <FaHeart />
-              <div>
-                <h4>Emotional Healing</h4>
-                <p>Heal anxiety and emotional pain.</p>
-              </div>
-            </div>
-
-            <div className="why-card">
-              <FaLeaf />
-              <div>
-                <h4>Mindfulness</h4>
-                <p>Create peace in everyday life.</p>
-              </div>
-            </div>
-
-            <div className="why-card">
-              <FaSmile />
-              <div>
-                <h4>Positive Lifestyle</h4>
-                <p>Build healthy habits for success.</p>
-              </div>
-            </div>
-
-            <div className="why-card">
-              <FaCheckCircle />
-              <div>
-                <h4>Lifetime Community</h4>
-                <p>Support beyond every session.</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
+        <Stagger className="why-grid">
+          {reasons.map((r, i) => (
+            <StaggerItem className="why-card" key={r.title}>
+              <span className="why-num">0{i + 1}</span>
+              <span className="why-icon">{r.icon}</span>
+              <h4>{r.title}</h4>
+              <p>{r.text}</p>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
     </section>
   );

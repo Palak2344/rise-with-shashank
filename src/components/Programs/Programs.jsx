@@ -1,15 +1,20 @@
+import { FaSpa, FaBrain, FaHeart, FaUsers, FaLeaf, FaLock, FaSun, FaCheck, FaWind, FaUserCheck } from "react-icons/fa";
+
+import SectionHead from "../ui/SectionHead";
+import { Reveal, Stagger, StaggerItem } from "../ui/Motion";
 import "./Programs.css";
-import {
-  FaSpa,
-  FaBrain,
-  FaHeart,
-  FaUsers,
-  FaLeaf,
-  FaLock,
-  FaSun,
-} from "react-icons/fa";
 
 const programs = [
+  {
+    icon: <FaUserCheck />,
+    title: "1:1 Coaching",
+    desc: "A personal, mind-first coaching journey through the Discover, Reset, Embody and Sustain phases, shaped around your life.",
+  },
+  {
+    icon: <FaWind />,
+    title: "Breathwork",
+    desc: "Guided breathing practices that calm the nervous system and help you shift your state quickly and reliably.",
+  },
   {
     icon: <FaSpa />,
     title: "Meditation",
@@ -42,91 +47,80 @@ const programs = [
   },
 ];
 
+const included = [
+  "5 Days of Live Guided Morning Meditation",
+  "Kickoff Training Session (60 Minutes)",
+  "Lifetime Access to All Recordings",
+  "Habit Building Framework",
+  "Community Support & Accountability",
+  "Progress Tracking Tools",
+];
+
+/* Moves the card's spotlight gradient to follow the cursor */
+function trackPointer(e) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+  e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+}
+
 function Programs() {
   return (
     <section className="programs" id="programs">
       <div className="container">
+        <SectionHead eyebrow="Our Programs" title="Transform Your Life Through" highlight="Powerful Programs">
+          Discover carefully designed programs that help you develop
+          mindfulness, emotional strength, confidence, and inner peace.
+        </SectionHead>
 
-        {/* Header */}
-
-        <div className="program-header">
-
-          <span className="section-tag">
-            Our Programs
-          </span>
-
-          <h2 className="section-title">
-            Transform Your Life Through
-            <span> Powerful Programs</span>
-          </h2>
-
-          <p className="section-description">
-            Discover carefully designed programs that help you develop
-            mindfulness, emotional strength, confidence, and inner peace.
-          </p>
-
-        </div>
-
-        {/* Program Cards */}
-
-        <div className="program-grid">
-
-          {programs.map((item, index) => (
-
-            <div className="program-card" key={index}>
-
-              <div className="program-icon">
-                {item.icon}
+        <Stagger className="program-grid">
+          {programs.map((item, i) => (
+            <StaggerItem className="program-card" key={item.title} onMouseMove={trackPointer}>
+              <div className="program-top">
+                <span className="icon-bubble">{item.icon}</span>
+                <span className="program-num">0{i + 1}</span>
               </div>
-
               <h3>{item.title}</h3>
-
               <p>{item.desc}</p>
-
-            </div>
-
+            </StaggerItem>
           ))}
+        </Stagger>
 
-        </div>
+        {/* Pricing */}
+        <Reveal className="program-cta">
+          <div className="cta-left">
+            <span className="cta-tag">Less than the price of a pizza 🍕</span>
+            <h3>5 Days Amazing Lifestyle Workshop</h3>
 
-        {/* Pricing Section */}
+            <div className="price">
+              <span className="currency">₹</span>
+              <span className="amount">501</span>
+            </div>
+            <p className="cta-subtitle">One-time commitment fee</p>
 
-        <div className="program-cta">
+            <a
+              href="https://pages.razorpay.com/transf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-gold pay-btn"
+            >
+              <FaLock />
+              Pay ₹501 & Reserve Your Spot
+            </a>
 
-          <span className="cta-tag">
-            Less than the price of a pizza 🍕
-          </span>
-
-          <h2>₹501</h2>
-
-          <p className="cta-subtitle">
-            One-time commitment fee
-          </p>
+            <p className="secure-text">Secure payment via Razorpay • Instant Confirmation</p>
+          </div>
 
           <ul className="cta-features">
-            <li>✔ 5 Days of Live Guided Morning Meditation</li>
-            <li>✔ Kickoff Training Session (60 Minutes)</li>
-            <li>✔ Lifetime Access to All Recordings</li>
-            <li>✔ Habit Building Framework</li>
-            <li>✔ Community Support & Accountability</li>
-            <li>✔ Progress Tracking Tools</li>
+            {included.map((item) => (
+              <li key={item}>
+                <span className="check">
+                  <FaCheck />
+                </span>
+                {item}
+              </li>
+            ))}
           </ul>
-
-<a
-  href="https://pages.razorpay.com/transf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="pay-btn"
->
-  <FaLock />
-  Pay ₹501 & Reserve Your Spot
-</a>
-          <p className="secure-text">
-            Secure payment via Razorpay • Instant Confirmation
-          </p>
-
-        </div>
-
+        </Reveal>
       </div>
     </section>
   );

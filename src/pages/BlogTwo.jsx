@@ -1,35 +1,15 @@
+import BlogHero from "./BlogHero";
 import "./BlogDetails.css";
 
 export default function BlogTwo() {
   return (
-    <div className="blog-details">
-
-      {/* HERO */}
-
-      <section
-        className="blog-hero"
-        style={{
-          backgroundImage: "url('/images/balance.webp')",
-        }}
-      >
-        <div className="overlay">
-
-          <span className="category">
-            Work-Life Balance
-          </span>
-
-          <h1>Healthy Work-Life Balance</h1>
-
-          <div className="meta">
-            <span>Published by Shashank Lalwani</span>
-            <span>Dec 16, 2022</span>
-            <span>6 min read</span>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ARTICLE */}
+    <article className="blog-details">
+      <BlogHero
+        image="/images/balance.webp"
+        category="Work-Life Balance"
+        title="Healthy Work-Life Balance"
+        meta={["Published by Shashank Lalwani", "Dec 16, 2022", "6 min read"]}
+      />
 
       <div className="blog-container">
 
@@ -195,7 +175,7 @@ export default function BlogTwo() {
           href="https://pages.razorpay.com/heal1"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn"
+          className="btn btn-primary"
         >
           Book a Session
         </a>
@@ -212,6 +192,6 @@ export default function BlogTwo() {
 
       </div>
 
-    </div>
+    </article>
   );
 }

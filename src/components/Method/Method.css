@@ -1,0 +1,186 @@
+/* =========================
+   PHASES
+========================= */
+
+.phases {
+  position: relative;
+}
+
+.phases-line {
+  position: absolute;
+  top: 31px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+}
+
+.phase-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.phase {
+  position: relative;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.phase-num {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 8px var(--bg-alt);
+  transition: background 0.4s, color 0.4s, transform 0.5s var(--ease);
+}
+
+.phase:hover .phase-num {
+  background: var(--accent);
+  color: var(--on-accent);
+  transform: scale(1.1);
+}
+
+.phase-when {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.phase h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.phase p {
+  font-size: 15px;
+}
+
+/* =========================
+   PILLARS
+========================= */
+
+.pillars {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pillars-head h3 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pillar {
+  position: relative;
+  padding: 30px 28px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s, border-color 0.5s;
+}
+
+.pillar:nth-child(2),
+.pillar:nth-child(4) {
+  top: 28px;
+}
+
+.pillar:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.pillar-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--on-accent);
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  transition: transform 0.6s var(--ease);
+}
+
+.pillar:hover .pillar-icon {
+  transform: rotate(-12deg) scale(1.1);
+}
+
+.pillar-num {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--border-strong);
+}
+
+.pillar h4 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.pillar p {
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .phases-line {
+    display: none;
+  }
+  .phase-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 90px;
+  }
+  .pillars-head {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .phase-grid,
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillar:nth-child(2),
+  .pillar:nth-child(4) {
+    top: 0;
+  }
+}

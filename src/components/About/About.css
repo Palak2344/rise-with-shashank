@@ -1,328 +1,278 @@
-.about {
-  padding: 100px 0;
-  background: #EEE6DA;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-
-.section-title {
-  text-align: center;
-  margin-bottom: 70px;
-}
-
-.section-title span {
-  display: inline-block;
-  background: #ffffff;
-  color: #7A8F78;
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 20px rgba(62,74,69,.08);
-}
-
-.section-title h2 {
-  font-size: 52px;
-  color: #57655f;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.2;
-}
-
-/* =========================
-   ABOUT LAYOUT
-========================= */
-
 .about-wrapper {
   display: grid;
-  grid-template-columns: 520px 1fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 90px;
   align-items: start;
-  width: 100%;
 }
 
 /* =========================
    IMAGE
 ========================= */
 
-.about-image{
-    position: relative;
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 30px;
+.about-image {
+  position: sticky;
+  top: 110px;
 }
 
-.about-image img{
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-
-    border-radius: 30px;
-    box-shadow: 0 25px 60px rgba(62,74,69,.18);
-    transition: .4s ease;
+.about-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-lg);
 }
 
-.about-image:hover img{
-    transform: scale(1.03);
+.about-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* =========================
-   EXPERIENCE BADGE
-========================= */
+.about-image::before {
+  content: "";
+  position: absolute;
+  inset: 24px -24px -24px 24px;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-lg);
+  opacity: 0.5;
+  z-index: -1;
+}
 
 .experience-badge {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
-  background: #7A8F78;
-  color: #fff;
-  padding: 18px 26px;
+  top: 32px;
+  left: -32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 22px;
+  border-radius: 20px;
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--shadow-md);
+  animation: bob 6s ease-in-out infinite;
+}
+
+.experience-badge strong {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.experience-badge > span {
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.about-quote {
+  position: absolute;
+  right: -28px;
+  bottom: 40px;
+  max-width: 250px;
+  padding: 18px 20px;
   border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(62,74,69,.25);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
 
-.experience-badge h2 {
-  font-size: 42px;
-  margin: 0;
+.about-quote svg {
+  color: var(--gold);
+  margin-bottom: 6px;
 }
 
-.experience-badge p {
-  margin: 5px 0 0;
-  font-size: 15px;
-  color: #fff;
+.about-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 /* =========================
    CONTENT
 ========================= */
 
-.about-content h3 {
-  font-size: 48px;
-  line-height: 1.2;
+.about-content h2 {
+  font-size: clamp(2.3rem, 4.4vw, 3.5rem);
+  margin-bottom: 14px;
+}
+
+.about-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 28px;
-  color: #3E4A45;
 }
 
-.about-content p {
-  color: #5f6b66;
-  line-height: 2;
-  margin-bottom: 22px;
-  font-size: 20px;
+.about-roles li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  transition: border-color 0.3s, transform 0.4s var(--ease);
 }
 
-.about-content strong {
-  color: #3E4A45;
+.about-roles li:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
-/* =========================
-   EXPERTISE
-========================= */
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.about-text .lead {
+  font-size: 1.2rem;
+  color: var(--ink);
+}
 
 .expertise {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 18px;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(62,74,69,.08);
-  transition: .35s;
-  border: 1px solid #C9B59A;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(62,74,69,.12);
-}
-
-.card svg {
-  font-size: 34px;
-  color: #7A8F78;
-}
-
-.card span {
-  font-size: 21px;
-  font-weight: 600;
-  color: #3E4A45;
-}
-
-/* =========================
-   COUNTERS
-========================= */
-
-.counter {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 25px;
-  margin-top: 60px;
-}
-
-.counter div {
-  background: #ffffff;
-  padding: 35px 20px;
-  border-radius: 22px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(62,74,69,.08);
-  border: 1px solid #C9B59A;
-  transition: .35s;
-}
-
-.counter div:hover {
-  transform: translateY(-6px);
-}
-
-.counter h2 {
-  color: #7A8F78;
-  font-size: 48px;
-  margin-bottom: 12px;
-}
-.counter p {
-  font-size: 18px;
-  color: #5f6b66;
-}
-/* =========================
-   INSTAGRAM BUTTON
-========================= */
-.instagram-btn {
-  margin-top: 55px;
-  display: inline-flex;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  background: linear-gradient(135deg,#7A8F78,#3E4A45);
-  color: white;
-  padding: 18px 36px;
-  border-radius: 60px;
-  font-size: 18px;
+  margin: 36px 0;
+}
+
+.expertise-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 13.5px;
   font-weight: 600;
-  transition: .35s;
+  color: var(--ink);
+  transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s;
 }
+
+.expertise-chip svg {
+  font-size: 20px;
+  color: var(--accent);
+  transition: transform 0.4s var(--ease), color 0.4s;
+}
+
+.expertise-chip:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.expertise-chip:hover svg {
+  transform: scale(1.2) rotate(-8deg);
+  color: var(--gold);
+}
+
+.about-counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.about-counters div {
+  padding: 22px 16px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.about-counters div:last-child {
+  border-right: none;
+}
+
+.about-counters strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.about-counters div > span {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .instagram-btn svg {
-  font-size: 22px;
+  font-size: 18px;
+  color: #e1306c;
 }
-.instagram-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(62,74,69,.28);
-}
+
 /* =========================
-   LAPTOP
+   RESPONSIVE
 ========================= */
-@media (max-width:1100px){
-.about-wrapper{
-    grid-template-columns:350px 1fr;
-    gap:50px;
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+  .about-image {
+    position: relative;
+    top: 0;
+    max-width: 460px;
+    margin-inline: auto;
+    width: 100%;
+  }
 }
-.about-image{
-    max-width:420px;
-}
-.counter{
-    grid-template-columns:repeat(2,1fr);
-}
-}
-/* =========================
-   TABLET
-========================= */
-@media (max-width:992px){
-.about{
-    padding:80px 20px;
-}
-.about-wrapper{
-    grid-template-columns:1fr;
-    gap:50px;
-}
-.about-image{
-    max-width:480px;
-    margin:auto;
-}
-.about-content{
-    text-align:center;
-}
-.expertise{
-    grid-template-columns:repeat(2,1fr);
-}
-.instagram-btn{
-    margin:40px auto 0;
-}
-}
-/* =========================
-   MOBILE
-========================= */
-@media (max-width:768px){
-.about{
-    padding:70px 18px;
-}
-.section-title h2{
-    font-size:34px;
-}
-.about-content h3{
-    font-size:30px;
-}
-.about-content p{
-    font-size:17px;
-}
-.about-image{
-    max-width:420px;
-}
-.expertise{
-    grid-template-columns:1fr;
-}
-.counter{
-    grid-template-columns:repeat(2,1fr);
-}
-.experience-badge{
-    padding:15px 18px;
-    left:15px;
-    bottom:15px;
-}
-.experience-badge h2{
-    font-size:30px;
-}
-}
-/* =========================
-   SMALL MOBILE
-========================= */
-@media (max-width:480px){
-.about{
-    padding:60px 15px;
-}
-.section-title h2{
-    font-size:28px;
-}
-.about-image{
-    max-width:100%;
-}
-.expertise{
-    grid-template-columns:1fr;
-}
-.counter{
-    grid-template-columns:1fr;
-}
-.experience-badge{
-    padding:12px 15px;
-    left:10px;
-    bottom:10px;
-}
-.experience-badge h2{
-    font-size:24px;
-}
-.instagram-btn{
-    width:100%;
-    justify-content:center;
-}
-.card{
-    padding:16px;
-}
+
+@media (max-width: 640px) {
+  .about-image::before {
+    inset: 14px -10px -14px 10px;
+  }
+  .experience-badge {
+    left: -6px;
+    top: 16px;
+    padding: 12px 16px;
+  }
+  .experience-badge strong {
+    font-size: 2rem;
+  }
+  .about-quote {
+    right: -6px;
+    bottom: 16px;
+    max-width: 200px;
+    padding: 14px;
+  }
+  .about-quote p {
+    font-size: 0.95rem;
+  }
+  .expertise {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-counters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-counters div:nth-child(2) {
+    border-right: none;
+  }
+  .about-counters div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border);
+  }
+  .instagram-btn {
+    width: 100%;
+  }
 }

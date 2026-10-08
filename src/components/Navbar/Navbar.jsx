@@ -1,135 +1,172 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaArrowRight, FaTimes } from "react-icons/fa";
+
+import Logo from "../ui/Logo";
+import ThemeToggle from "../ui/ThemeToggle";
 import "./Navbar.css";
-import { FaUsers, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/programs", label: "Programs" },
+  { to: "/workshops", label: "Workshops" },
+  { to: "/retreat", label: "Retreat" },
+  { to: "/corporate", label: "Corporate" },
+  { to: "/blog", label: "Blog" },
+  { to: "/gallery", label: "Gallery" },
+  { to: "/testimonials", label: "Stories" },
+  { to: "/contact", label: "Contact" },
+];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
 
-  const handleLinkClick = () => {
-    setMenuOpen(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    // Wait for sidebar to close, then scroll to top
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    }, 150);
-  };
+  // Lock page scroll + allow Esc to close while the drawer is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
 
   return (
     <>
-      <header className="navbar">
+      <motion.header
+        className={`navbar ${scrolled ? "scrolled" : ""}`}
+        initial={{ y: -90, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className="container nav-container">
-          {/* Logo */}
-          <Link to="/" className="logo" onClick={handleLinkClick}>
-            <img
-              src="/images/logo.png"
-              alt="Rise with Shashank"
-            />
-            <div>
-              <h2>Rise with</h2>
-              <h1>SHASHANK</h1>
-            </div>
+          <Link to="/" className="nav-logo" aria-label="Rise with Shashank — home">
+            <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="desktop-nav">
+          <nav className="desktop-nav" aria-label="Main">
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/programs">Programs</Link></li>
-              <li><Link to="/workshops">Workshops</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/testimonials">Testimonials</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            
+              {links.map((link) => (
+                <li key={link.to}>
+                  <NavLink to={link.to} end={link.to === "/"}>
+                    {({ isActive }) => (
+                      <>
+                        {link.label}
+                        {isActive && (
+                          <motion.span
+                            layoutId="nav-pill"
+                            className="nav-pill"
+                            transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                          />
+                        )}
+                      </>
+                    )}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          {/* Right Side */}
           <div className="nav-right">
+            <ThemeToggle />
+
+            <Link to="/programs" className="btn btn-primary nav-cta">
+              Join Workshop
+            </Link>
 
             <button
-              className="menu-btn"
-              onClick={() => setMenuOpen(true)}
+              type="button"
+              className={`menu-btn ${menuOpen ? "open" : ""}`}
+              onClick={() => setMenuOpen((o) => !o)}
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
             >
-              <FaBars />
+              <span />
+              <span />
+              <span />
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
-      {/* Overlay */}
-      <div
-        className={`overlay ${menuOpen ? "show" : ""}`}
-        onClick={() => setMenuOpen(false)}
-      />
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div
+              className="nav-overlay"
+              onClick={() => setMenuOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
 
-      {/* Mobile Sidebar */}
-      <aside className={`sidebar ${menuOpen ? "active" : ""}`}>
-        <div className="sidebar-top">
-          <h2>Menu</h2>
+            <motion.aside
+              className="drawer"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 260, damping: 32 }}
+              aria-label="Mobile menu"
+            >
+              <div className="drawer-top">
+                <Logo size={42} />
+                <button
+                  type="button"
+                  className="drawer-close"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <FaTimes />
+                </button>
+              </div>
 
-          <button onClick={() => setMenuOpen(false)}>
-            <FaTimes />
-          </button>
-        </div>
+              <motion.ul
+                initial="hidden"
+                animate="show"
+                variants={{ show: { transition: { staggerChildren: 0.05, delayChildren: 0.15 } } }}
+              >
+                {links.map((link, i) => (
+                  <motion.li
+                    key={link.to}
+                    variants={{
+                      hidden: { opacity: 0, x: 30 },
+                      show: { opacity: 1, x: 0 },
+                    }}
+                  >
+                    <NavLink to={link.to} end={link.to === "/"} onClick={closeMenu}>
+                      <span className="drawer-index">0{i + 1}</span>
+                      {link.label}
+                    </NavLink>
+                  </motion.li>
+                ))}
+              </motion.ul>
 
-        <ul>
-          <li>
-            <Link to="/" onClick={handleLinkClick}>
-              Home
-            </Link>
-          </li>
+              <div className="drawer-bottom">
+                <div className="drawer-theme">
+                  <span>Appearance</span>
+                  <ThemeToggle />
+                </div>
 
-          <li>
-            <Link to="/about" onClick={handleLinkClick}>
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/programs" onClick={handleLinkClick}>
-              Programs
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/workshops" onClick={handleLinkClick}>
-              Workshops
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/gallery" onClick={handleLinkClick}>
-              Gallery
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/blog" onClick={handleLinkClick}>
-              Blog
-            </Link>
-          </li>
-
-
-          <li>
-            <Link to="/testimonials" onClick={handleLinkClick}>
-              Testimonials
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/contact" onClick={handleLinkClick}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </aside>
+                <Link to="/programs" className="btn btn-primary" onClick={closeMenu}>
+                  Join Workshop <FaArrowRight />
+                </Link>
+              </div>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

@@ -1,93 +1,63 @@
+import { Link } from "react-router-dom";
+import { FaHeart, FaBrain, FaLeaf, FaUsers, FaArrowRight } from "react-icons/fa";
+
+import { Reveal, Stagger, StaggerItem } from "../ui/Motion";
 import "./Journey.css";
-import {
-  FaHeart,
-  FaBrain,
-  FaLeaf,
-  FaUsers,
-} from "react-icons/fa";
+
+const features = [
+  { icon: <FaHeart />, title: "Emotional Healing", text: "Release stress and emotional blocks." },
+  { icon: <FaBrain />, title: "Mind Mastery", text: "Improve focus and positive thinking." },
+  { icon: <FaLeaf />, title: "Balanced Lifestyle", text: "Create healthier daily habits." },
+  { icon: <FaUsers />, title: "Supportive Community", text: "Grow together with like-minded people." },
+];
 
 function Journey() {
   return (
-    <section className="journey">
-
+    <section className="journey section-alt">
       <div className="container journey-container">
+        <Reveal direction="right" className="journey-image">
+          <img src="/images/about.jpg" alt="Shashank leading a meditation circle" loading="lazy" />
 
-        <div className="journey-image">
-
-          <img
-            src="/images/about.png"
-            alt="About Rise with Shashank"
-          />
-
-          <div className="experience-card">
-            <h2>15+</h2>
-            <p>Years of Inspiring Lives</p>
+          <div className="journey-card">
+            <strong>8+</strong>
+            <span>Years of Inspiring Lives</span>
           </div>
-
-        </div>
+        </Reveal>
 
         <div className="journey-content">
+          <Reveal>
+            <span className="eyebrow">About Rise with Shashank</span>
+            <h2>
+              Begin Your Journey Towards{" "}
+              <span className="accent-text">Inner Transformation</span>
+            </h2>
+            <p>
+              Rise with Shashank empowers individuals through meditation,
+              mindfulness, emotional healing, and transformational coaching.
+              Our mission is to help people discover peace, clarity,
+              confidence, and purpose in every stage of life.
+            </p>
+          </Reveal>
 
-          <span className="section-tag">
-            About Rise with Shashank
-          </span>
+          <Stagger className="features">
+            {features.map((f) => (
+              <StaggerItem className="feature-card" key={f.title}>
+                <span className="icon-bubble">{f.icon}</span>
+                <div>
+                  <h4>{f.title}</h4>
+                  <p>{f.text}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
 
-          <h2>
-            Begin Your Journey Towards
-            <span> Inner Transformation</span>
-          </h2>
-
-          <p>
-            Rise with Shashank empowers individuals through meditation,
-            mindfulness, emotional healing, and transformational coaching.
-            Our mission is to help people discover peace, clarity,
-            confidence, and purpose in every stage of life.
-          </p>
-
-          <div className="features">
-
-            <div className="feature-card">
-              <FaHeart />
-              <div>
-                <h4>Emotional Healing</h4>
-                <p>Release stress and emotional blocks.</p>
-              </div>
-            </div>
-
-            <div className="feature-card">
-              <FaBrain />
-              <div>
-                <h4>Mind Mastery</h4>
-                <p>Improve focus and positive thinking.</p>
-              </div>
-            </div>
-
-            <div className="feature-card">
-              <FaLeaf />
-              <div>
-                <h4>Balanced Lifestyle</h4>
-                <p>Create healthier daily habits.</p>
-              </div>
-            </div>
-
-            <div className="feature-card">
-              <FaUsers />
-              <div>
-                <h4>Supportive Community</h4>
-                <p>Grow together with like-minded people.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <button className="journey-btn">
-            Learn More
-          </button>
-
+          <Reveal>
+            <Link to="/about" className="btn btn-primary">
+              Learn More <FaArrowRight />
+            </Link>
+          </Reveal>
         </div>
-
       </div>
-
     </section>
   );
 }

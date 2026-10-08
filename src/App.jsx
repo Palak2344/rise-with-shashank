@@ -8,6 +8,8 @@ import WorkshopsPage from "./pages/WorkshopsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import GalleryPage from "./pages/GalleryPage";
 import ContactPage from "./pages/ContactPage";
+import RetreatPage from "./pages/RetreatPage";
+import CorporatePage from "./pages/CorporatePage";
 import BlogPage from "./pages/BlogPage";
 import BlogOne from "./pages/BlogOne";
 import BlogTwo from "./pages/BlogTwo";
@@ -27,6 +29,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
           <Route path="/workshops" element={<WorkshopsPage />} />
+          <Route path="/retreat" element={<RetreatPage />} />
+          <Route path="/corporate" element={<CorporatePage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/blog" element={<BlogPage />} />
